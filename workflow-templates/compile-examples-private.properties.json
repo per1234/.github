@@ -1,0 +1,7 @@
+{
+  "name": "Compile Examples - Private Repo",
+  "description": "\"Smoke test\" Arduino library by compiling example sketches. Configured for use in private repositories.",
+  "iconName": "arduino",
+  "categories": ["C++", "C"],
+  "filePatterns": ["^library\\.properties$", "^keywords\\.txt$"]
+}
