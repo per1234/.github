@@ -1,0 +1,5 @@
+{
+  "name": "Check Workflows",
+  "description": "Validate GitHub Actions workflows against the JSON schema.",
+  "iconName": "flowchart"
+}
