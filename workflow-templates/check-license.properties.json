@@ -1,0 +1,5 @@
+{
+  "name": "Check License",
+  "description": "Check for issues with the repository's shell scripts.",
+  "iconName": "copyright"
+}
