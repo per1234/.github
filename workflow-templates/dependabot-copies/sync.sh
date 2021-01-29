@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 # Copy the workflow templates to the folder where Dependabot can check them for updates.
 
-WORKFLOW_COPIES_PATH="${PWD}/.github/workflows"
-rm "${WORKFLOW_COPIES_PATH}/*"
-cp ../*.{yml,yaml} "$WORKFLOW_COPIES_PATH"
+readonly SCRIPT_PATH="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+readonly WORKFLOW_COPIES_PATH="${SCRIPT_PATH}/.github/workflows"
+rm "${WORKFLOW_COPIES_PATH}/"*
+cp "${SCRIPT_PATH}/../"*.{yml,yaml} "$WORKFLOW_COPIES_PATH"
