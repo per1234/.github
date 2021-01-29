@@ -1,0 +1,105 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/compile-platform-examples.md
+name: Compile Platform Examples
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/compile-platform-examples.yml"
+      - "cores/**"
+      - "libraries/**"
+      - "variants/**"
+      - "boards.txt"
+      - "platform.txt"
+  pull_request:
+    paths:
+      - ".github/workflows/compile-platform-examples.yml"
+      - "cores/**"
+      - "libraries/**"
+      - "variants/**"
+      - "boards.txt"
+      - "platform.txt"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to external resources (libraries, platforms).
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  build:
+    name: ${{ matrix.board.fqbn }}
+    runs-on: ubuntu-latest
+
+    env:
+      SKETCHES_REPORTS_PATH: sketches-reports
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        board:
+          # TODO: Add list of boards to compile for here:
+          - fqbn: arduino:avr:uno
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get week number for use in cache keys
+        id: get-date
+        run: |
+          echo "::set-output name=week-number::$(date --utc '+%V')"
+
+      - name: Load dependencies cache for the arduino/compile-sketches action
+        uses: actions/cache@v2
+        with:
+          path: ~/work/_actions/arduino/compile-sketches/main/compilesketches/.venv
+          # The key name uses the week number to cause it to update weekly.
+          key: ${{ runner.os }}-arduino-compile-sketches-action-venv-${{ steps.get-date.outputs.week-number }}
+          # The updated cache will be based on the existing one.
+          restore-keys: |
+            ${{ runner.os }}-arduino-compile-sketches-action-venv-
+
+      - name: Load dependencies cache for the board
+        uses: actions/cache@v2
+        with:
+          path: ~/.arduino15/staging
+          key: ${{ runner.os }}-arduino-data-${{ steps.get-date.outputs.week-number }}
+          restore-keys: |
+            ${{ runner.os }}-arduino-data-
+
+      # The source files are in a subfolder of the ArduinoCore-API repository,
+      # so it's not possible to clone it directly to the final destination in the core.
+      - name: Checkout ArduinoCore-API
+        uses: actions/checkout@v2
+        with:
+          repository: arduino/ArduinoCore-API
+          path: ArduinoCore-API
+
+      - name: Install ArduinoCore-API
+        run: mv "$GITHUB_WORKSPACE/ArduinoCore-API/api" "$GITHUB_WORKSPACE/cores/arduino"
+
+      - name: Compile examples
+        uses: arduino/compile-sketches@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          fqbn: ${{ matrix.board.fqbn }}
+          platforms: |
+            # Use Boards Manager to install the latest release of the platform to get the toolchain.
+            # TODO: Replace this with the name of the platform under test.
+            - name: arduino:avr
+            # Overwrite the Boards Manager installation with the platform from the repository.
+            - source-path: ./
+              # TODO: Replace this with the name of the platform under test.
+              name: arduino:avr
+          sketch-paths: |
+            - libraries
+          enable-deltas-report: true
+          sketches-report-path: ${{ env.SKETCHES_REPORTS_PATH }}
+
+      - name: Save sketches report as workflow artifact
+        uses: actions/upload-artifact@v2
+        with:
+          if-no-files-found: error
+          path: ${{ env.SKETCHES_REPORTS_PATH }}
+          name: ${{ env.SKETCHES_REPORTS_PATH }}

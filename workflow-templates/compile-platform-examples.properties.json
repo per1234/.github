@@ -1,0 +1,7 @@
+{
+  "name": "Compile Platform Examples",
+  "description": "\"Smoke test\" Arduino platform by compiling example sketches of bundled libraries.",
+  "iconName": "arduino",
+  "categories": ["C++", "C"],
+  "filePatterns": ["^boards\\.txt"]
+}
