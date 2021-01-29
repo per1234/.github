@@ -12,6 +12,7 @@ on:
       - ".github/workflows/check-workflow-template-copies-sync.yml"
       - "workflow-templates/*.yml"
       - "workflow-templates/*.yaml"
+      - "workflow-templates/dependabot-copies/sync.sh"
       - "workflow-templates/dependabot-copies/.github/workflows/*"
       - "workflow-templates/dependabot-copies/.github/workflows/*"
   push:
@@ -19,6 +20,7 @@ on:
       - ".github/workflows/check-workflow-template-copies-sync.yml"
       - "workflow-templates/*.yml"
       - "workflow-templates/*.yaml"
+      - "workflow-templates/dependabot-copies/sync.sh"
       - "workflow-templates/dependabot-copies/.github/workflows/*"
       - "workflow-templates/dependabot-copies/.github/workflows/*"
 
