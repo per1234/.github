@@ -1,0 +1,5 @@
+{
+  "name": "Compile Sketches",
+  "description": "\"Smoke test\" Arduino sketches by compiling.",
+  "iconName": "01-Main"
+}
