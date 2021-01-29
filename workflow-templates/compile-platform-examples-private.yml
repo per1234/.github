@@ -1,0 +1,98 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/compile-platform-examples-private.yml
+name: Compile Platform Examples - Private Repo
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/compile-platform-examples-private.yml"
+      - "cores/**"
+      - "libraries/**"
+      - "variants/**"
+      - "boards.txt"
+      - "platform.txt"
+  push:
+    paths:
+      - ".github/workflows/compile-platform-examples-private.yml"
+      - "cores/**"
+      - "libraries/**"
+      - "variants/**"
+      - "boards.txt"
+      - "platform.txt"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to external resources (libraries, platforms).
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+env:
+  SKETCHES_REPORTS_PATH: sketches-reports
+  SKETCHES_REPORTS_ARTIFACT_NAME: sketches-reports
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      SKETCHES_REPORTS_PATH: sketches-reports
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        board:
+          # TODO: Add list of boards to compile for here:
+          - fqbn: arduino:avr:uno # TODO: Add the board's FQBN here.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # The source files are in a subfolder of the ArduinoCore-API repository, so it's not possible to clone it directly to the final destination in the core
+      - name: Checkout ArduinoCore-API
+        uses: actions/checkout@v2
+        with:
+          repository: arduino/ArduinoCore-API
+          path: ArduinoCore-API
+
+      - name: Install ArduinoCore-API
+        run: mv "$GITHUB_WORKSPACE/ArduinoCore-API/api" "$GITHUB_WORKSPACE/cores/arduino"
+
+      - name: Compile examples
+        uses: arduino/compile-sketches@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          fqbn: ${{ matrix.board.fqbn }}
+          platforms: |
+            # Use Boards Manager to install the latest release of the platform to get the toolchain.
+            # TODO: Replace this with the name of the platform under test.
+            - name: "arduino:avr"
+            # Overwrite the Boards Manager installation with the platform from the repository.
+            - source-path: "./"
+              # TODO: Replace this with the name of the platform under test.
+              name: "arduino:avr"
+          sketch-paths: |
+            - ./libraries/
+          enable-deltas-report: true
+          sketches-report-path: ${{ env.SKETCHES_REPORTS_PATH }}
+
+      - name: Save memory usage change report as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: ${{ env.SKETCHES_REPORTS_PATH }}
+          name: ${{ env.SKETCHES_REPORTS_PATH }}
+
+  report-size-deltas:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download sketches reports artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ env.SKETCHES_REPORTS_ARTIFACT_NAME }}
+          path: ${{ env.SKETCHES_REPORTS_PATH }}
+
+      - uses: arduino/report-size-deltas@main
+        with:
+          sketches-reports-source: ${{ env.SKETCHES_REPORTS_PATH }}
