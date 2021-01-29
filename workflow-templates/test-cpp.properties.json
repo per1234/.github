@@ -1,0 +1,13 @@
+{
+  "name": "Test C++",
+  "description": "Run unit tests on C/C++ code and report code coverage.",
+  "iconName": "checklist",
+  "categories": ["C++", "C"],
+  "filePatterns": [
+    ".*\\.cpp$",
+    ".*\\.c$",
+    ".*\\.h$",
+    ".*\\.cpp$",
+    "^CMakeLists\\.txt$"
+  ]
+}
