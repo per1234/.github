@@ -1,0 +1,5 @@
+{
+  "name": "Compile Platform Examples",
+  "description": "\"Smoke test\" Arduino platform by compiling example sketches of bundled libraries.",
+  "iconName": "01-Main"
+}
