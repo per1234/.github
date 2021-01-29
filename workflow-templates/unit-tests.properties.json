@@ -1,0 +1,5 @@
+{
+  "name": "Unit Tests",
+  "description": "Run unit tests and report code coverage.",
+  "iconName": "checklist"
+}
