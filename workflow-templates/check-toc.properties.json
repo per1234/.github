@@ -1,0 +1,7 @@
+{
+  "name": "Check ToC",
+  "description": "Check whether the generated table of contents in README.md matches the content.",
+  "iconName": "toc",
+  "categories": ["Markdown"],
+  "filePatterns": [".*\\.mdx?$", ".*\\.mkdn$", ".*\\.mdown$", ".*\\.markdown$"]
+}
