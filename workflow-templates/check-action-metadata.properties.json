@@ -1,0 +1,5 @@
+{
+  "name": "Check Action Metadata",
+  "description": "Validate the action.yml GitHub Actions action metadata file against its JSON schema.",
+  "iconName": "action"
+}
