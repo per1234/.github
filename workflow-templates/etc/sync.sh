@@ -18,6 +18,7 @@ cp \
 cp \
   "${WORKFLOW_TEMPLATES_PATH}/check-markdown.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-shell.yml" \
+  "${WORKFLOW_TEMPLATES_PATH}/spell-check.yml" \
   "$WORKFLOWS_PATH"
 
 # Sync workflow templates with the copies in the folder where Dependabot can check them for updates.
