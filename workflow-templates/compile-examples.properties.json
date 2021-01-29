@@ -1,0 +1,7 @@
+{
+  "name": "Compile Examples",
+  "description": "\"Smoke test\" Arduino library by compiling example sketches.",
+  "iconName": "arduino",
+  "categories": ["C++", "C"],
+  "filePatterns": ["^library\\.properties$", "^keywords\\.txt$"]
+}
