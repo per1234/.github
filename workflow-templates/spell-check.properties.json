@@ -1,0 +1,5 @@
+{
+  "name": "Spell Check",
+  "description": "Check the contents of the repository for common misspellings.",
+  "iconName": "book"
+}
