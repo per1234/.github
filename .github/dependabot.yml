@@ -1,0 +1,18 @@
+# See: https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#assignees
+version: 2
+
+updates:
+  # Configure check for outdated GitHub Actions actions in workflows.
+  # See: https://docs.github.com/en/github/administering-a-repository/keeping-your-actions-up-to-date-with-dependabot
+  - package-ecosystem: github-actions
+    directory: / # Check the repository's workflows under /.github/workflows/
+    assignees:
+      - per1234
+
+  # Configure check for outdated GitHub Actions actions in workflow templates.
+  - package-ecosystem: github-actions
+    directory: /workflow-templates/dependabot-copies/ # The workflows under the .github/workflows/ subfolder will be checked.
+    commit-message:
+      prefix: (DO NOT MERGE)
+    assignees:
+      - per1234

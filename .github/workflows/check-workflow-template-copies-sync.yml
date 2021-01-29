@@ -1,0 +1,40 @@
+# In order to get notifications from Dependabot about outdated action versions used in the templates,
+# the workflows in /workflow-templates must always be synced with the ones in
+# /workflow-templates/dependabot-copies/.github/workflows/
+# If this workflow fails, run workflow-templates/dependabot-copies/sync.sh and commit.
+
+name: Check Workflow Template Copies Sync
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/check-workflow-template-copies-sync.yml"
+      - "workflow-templates/*.yml"
+      - "workflow-templates/*.yaml"
+      - "workflow-templates/dependabot-copies/.github/workflows/*"
+      - "workflow-templates/dependabot-copies/.github/workflows/*"
+  push:
+    paths:
+      - ".github/workflows/check-workflow-template-copies-sync.yml"
+      - "workflow-templates/*.yml"
+      - "workflow-templates/*.yaml"
+      - "workflow-templates/dependabot-copies/.github/workflows/*"
+      - "workflow-templates/dependabot-copies/.github/workflows/*"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout local repository
+        uses: actions/checkout@v2
+
+      - name: Check workflow template Dependabot copies sync
+        run: |
+          "${{ github.workspace }}/workflow-templates/dependabot-copies/sync.sh"
+          git add .
+          if ! git diff --color --exit-code HEAD; then
+            echo "::error::Contents of /workflow-templates/dependabot-copies/.github/workflows/ is out of sync with /workflow-templates/. Please run workflow-templates/dependabot-copies/sync.sh"
+            exit 1
+          fi
