@@ -1,0 +1,12 @@
+{
+  "name": "Report Size Deltas",
+  "description": "Comment to PRs a report of the resulting change in memory usage of the sketches compiled by the arduino/compile-sketches action. NOTE: Not for use in private repositories.",
+  "iconName": "heart",
+  "categories": ["C++", "C"],
+  "filePatterns": [
+    ".*\\.ino$",
+    "^library\\.properties$",
+    "^keywords\\.txt$",
+    "^boards\\.txt"
+  ]
+}
