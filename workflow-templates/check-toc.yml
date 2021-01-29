@@ -1,0 +1,38 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-toc.yml
+name: Check ToC
+
+env:
+  # TODO: Set the maximum table of contents depth, as used in the markdown-toc --maxdepth flag.
+  MAX_DEPTH: 3
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/check-toc.yml"
+      # TODO: Update this if ToC of any other files should be checked.
+      - "README.md"
+  push:
+    paths:
+      - ".github/workflows/check-toc.yml"
+      - "README.md"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout local repository
+        uses: actions/checkout@v2
+
+      - name: Install markdown-toc
+        run: sudo npm install --global markdown-toc
+
+      - name: Check ToC
+        run: |
+          # See: https://github.com/jonschlinkert/markdown-toc#cli
+          # TODO: Update this if any other files should be checked.
+          markdown-toc --bullets=- --maxdepth=${{ env.MAX_DEPTH }} -i "${{ github.workspace }}/README.md"
+          git diff --color --exit-code

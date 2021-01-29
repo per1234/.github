@@ -1,0 +1,5 @@
+{
+  "name": "Check ToC",
+  "description": "Check whether the generated table of contents in README.md matches the content.",
+  "iconName": "toc"
+}
