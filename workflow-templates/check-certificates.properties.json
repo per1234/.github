@@ -1,0 +1,5 @@
+{
+  "name": "Check Certificates",
+  "description": "Check for issues with the repository's signing certificates.",
+  "iconName": "certificate"
+}
