@@ -1,0 +1,83 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-shell.md
+name: Check Shell Scripts
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-shell.yml"
+      - "**/.editorconfig"
+      - "**.bash"
+      - "**.sh"
+  pull_request:
+    paths:
+      - ".github/workflows/check-shell.yml"
+      - "**/.editorconfig"
+      - "**.bash"
+      - "**.sh"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by tool changes.
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: ShellCheck
+        uses: azohra/shell-linter@latest
+
+  formatting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Format shell scripts
+        # https://github.com/mvdan/sh
+        run: docker run --volume "${{ github.workspace }}":/mnt --workdir /mnt mvdan/shfmt:latest -w .
+
+      - name: Check formatting
+        run: git diff --color --exit-code
+
+  executable:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check for non-executable scripts
+        run: |
+          EXIT_STATUS=0
+          while read -r nonExecutableScriptPath; do
+            # The while loop always runs once, even if no file was found
+            if [[ "$nonExecutableScriptPath" == "" ]]; then
+              continue
+            fi
+
+            echo "::error file=${nonExecutableScriptPath}::non-executable script file: $nonExecutableScriptPath";
+            if [[ "$EXIT_STATUS" == "0" ]]; then
+              EXIT_STATUS=1
+            fi
+          done <<<"$(
+                      find \
+                        ${{ github.workspace }} \
+                        -path '${{ github.workspace }}/.git' -prune -or \
+                        \( \
+                          \( \
+                            -name '*.bash' -or \
+                            -name '*.sh' \
+                          \) -and \
+                          -type f -and \
+                          -not -executable -and \
+                          -print \
+                        \) \
+                  )"
+          exit $EXIT_STATUS

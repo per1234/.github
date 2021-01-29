@@ -1,0 +1,7 @@
+{
+  "name": "Check Shell Scripts",
+  "description": "Check for issues with the repository's shell scripts.",
+  "iconName": "shell",
+  "categories": ["Shell"],
+  "filePatterns": [".*\\.sh$", ".*\\.bash$", ".*\\.bats$"]
+}
