@@ -1,0 +1,5 @@
+{
+  "name": "Report Size Deltas",
+  "description": "Comment to PRs a report of the resulting change in memory usage of the sketches compiled by the arduino/compile-sketches action. WARNING: don't use in private repos (see: https://github.com/arduino/report-size-deltas#run-from-the-same-workflow-as-the-arduinocompile-sketches-action).",
+  "iconName": "heart"
+}
