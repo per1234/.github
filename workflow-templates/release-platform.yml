@@ -1,4 +1,4 @@
-name: release
+name: Release Platform
 
 on:
   push:
@@ -25,13 +25,13 @@ jobs:
           if [[ $(grep -r api platform.txt) ]]; then echo "::set-output name=IS_API::true"; fi
 
       - name: Checkout latest tag of ArduinoCore-API and add it to the core
+        if: steps.checkapi.outputs.IS_API == 'true'
         run: |
           cd extras/ArduinoCore-API
           git fetch --tags
           git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
           cd ../..
           mv "$GITHUB_WORKSPACE/extras/ArduinoCore-API/api" "$GITHUB_WORKSPACE/cores/arduino"
-        if: steps.checkapi.outputs.IS_API == 'true'
 
       - name: Remove ArduinoCore-API
         run: rm -r "$GITHUB_WORKSPACE/extras/ArduinoCore-API"
@@ -58,8 +58,8 @@ jobs:
 
       - name: Upload package_*_index.json and *.tar.bz2 file to Arduino downloads servers
         env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws s3 sync extras/staging/ s3://${{ secrets.ARDUINO_DOWNLOADS_BUCKET }}/packages/staging/ --exclude "*" --include *.json
           aws s3 sync extras/staging/ s3://${{ secrets.ARDUINO_DOWNLOADS_BUCKET }}/cores/staging/ --exclude "*" --include *.tar.bz2
@@ -102,6 +102,6 @@ jobs:
           SLACK_USERNAME: ArduinoBot
           SLACK_ICON: https://github.com/arduino.png?size=48
           SLACK_TITLE: Arduino core pre-release
-          SLACK_MESSAGE: 'Version ${{ env.TAG_VERSION }} of core ${{ env.REPOSITORY_NAME }} is now available'
+          SLACK_MESSAGE: "Version ${{ env.TAG_VERSION }} of core ${{ env.REPOSITORY_NAME }} is now available"
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           MSG_MINIMAL: true

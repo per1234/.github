@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-#  pack.*.bash - Bash script to help packaging samd core releases.
+#  pack.release.bash - Bash script to help packaging platform releases.
 #  Copyright (c) 2015 Arduino LLC.  All right reserved.
 #
 #  This library is free software; you can redistribute it and/or
@@ -17,7 +17,6 @@
 #  License along with this library; if not, write to the Free Software
 #  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-# Version check removed because version string passed from jenkins was incorrect
 VERSION_FROM_TAG=$1
 CORE_NAME=$2
 echo $VERSION_FROM_TAG
@@ -26,7 +25,7 @@ VERSION=`grep version= platform.txt | sed 's/version=//g'`
 echo $VERSION
 
 if [ $VERSION != $VERSION_FROM_TAG ]; then
-    exit 0
+  exit 0
 fi
 
 PWD=`pwd`
@@ -39,7 +38,7 @@ rm -f *.tar.bz2
 rm -f *.json
 
 cd ..
-tar  --exclude=extras/** --exclude=.git* --exclude=.idea -cjhf $FILENAME $FOLDERNAME
+tar --exclude=extras/** --exclude=.git* --exclude=.idea -cjhf $FILENAME $FOLDERNAME
 cd -
 
 mv ../$FILENAME .
@@ -48,9 +47,7 @@ CHKSUM=`sha256sum $FILENAME | awk '{ print $1 }'`
 SIZE=`wc -c $FILENAME | awk '{ print $1 }'`
 
 cat extras/package_index.json.NewTag.template |
-# sed "s/%%BUILD_NUMBER%%/${BUILD_NUMBER}/" |
-# sed "s/%%CURR_TIME%%/${CURR_TIME_SED}/" |
-sed "s/%%VERSION%%/${VERSION}/" |
-sed "s/%%FILENAME%%/${FILENAME}/" |
-sed "s/%%CHECKSUM%%/${CHKSUM}/" |
-sed "s/%%SIZE%%/${SIZE}/" > package_${CORE_NAME}_${VERSION}_index.json
+  sed "s/%%VERSION%%/${VERSION}/" |
+  sed "s/%%FILENAME%%/${FILENAME}/" |
+  sed "s/%%CHECKSUM%%/${CHKSUM}/" |
+  sed "s/%%SIZE%%/${SIZE}/" >package_${CORE_NAME}_${VERSION}_index.json
