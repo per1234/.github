@@ -1,0 +1,5 @@
+{
+  "name": "Release Platform",
+  "description": "Release an Arduino boards platform to Boards Manager.",
+  "iconName": "01-Main"
+}
