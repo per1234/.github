@@ -1,0 +1,5 @@
+{
+  "name": "Check Prettier Formatting",
+  "description": "Use Prettier to check formatting.",
+  "iconName": "ribbon"
+}
