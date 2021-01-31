@@ -52,3 +52,7 @@ On every push and pull request that affects relevant files, and periodically, ru
 The `.yamllint.yml` file is used to configure `yamllint`:
 https://yamllint.readthedocs.io/en/stable/configuration.html
 ```
+
+## Related
+
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)

@@ -38,3 +38,10 @@ code.
 ```markdown
 On every push, pull request, and periodically, run [Arduino Lint](https://github.com/arduino/arduino-lint) to check for common problems not related to the project code.
 ```
+
+## Related
+
+- ["Check Arduino Formatting" workflow](check-arduino-formatting.md)
+- ["Compile Examples" workflow](compile-examples.md)
+- ["Compile Platform Examples" workflow](compile-platform-examples.md)
+- ["Compile Sketches" workflow](compile-sketches.md)

@@ -43,3 +43,8 @@ libraries for the specified boards.
 ```markdown
 On every push or pull request that affects relevant files, and periodically, use [the `arduino/compile-sketches` action](https://github.com/arduino/compile-sketches) to compile example sketches of all bundled libraries for the specified boards.
 ```
+
+## Related
+
+- ["Report Size Deltas" workflow](report-size-deltas.md)
+- ["Check Arduino" workflow](check-arduino.md)

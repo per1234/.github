@@ -83,3 +83,9 @@ Arduino's Markdown style is defined by the `.markdownlint.yml` file.
 In the event the repository contains externally maintained Markdown files, markdownlint can be configured to ignore them via a `.markdownlintignore` file:
 https://github.com/igorshubovych/markdownlint-cli#ignoring-files
 ```
+
+## Related
+
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
+- ["Spell Check" workflow](spell-check.md)
+- ["Check ToC" workflow](check-toc.md)

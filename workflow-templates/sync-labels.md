@@ -86,3 +86,7 @@ according to the universal, shared, and local label configuration files.
 ```markdown
 On every push that changes relevant files, and periodically, use [github-label-sync](https://github.com/Financial-Times/github-label-sync) to configure the repository's issue/PR labels according to the universal, shared, and local label configuration files.
 ```
+
+## Related
+
+- ["Check Workflows" workflow](check-workflows.md)

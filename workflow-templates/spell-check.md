@@ -48,3 +48,8 @@ On every push, pull request, and periodically, use [the `codespell-project/actio
 
 In the event of a false positive, the problematic word should be added, in all lowercase, to the `ignore-words-list` field of `./.codespellrc`. Regardless of the case of the word in the false positive, it must be in all lowercase in the ignore list. The ignore list is comma-separated with no spaces.
 ```
+
+## Related
+
+- ["Check Markdown" workflow](check-markdown.md)
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)

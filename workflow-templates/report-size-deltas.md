@@ -20,3 +20,13 @@ commented to the PR thread.
 ```markdown
 On creation or commit to a pull request, use [the `arduino/report-size-deltas` action](https://github.com/arduino/report-size-deltas) to comment a report of the resulting change in memory usage of the examples to the PR thread.
 ```
+
+## Related
+
+- ["Compile Examples" workflow](compile-examples.md)
+- ["Compile Examples - Private Repo" workflow](compile-examples-private.md)
+- ["Compile Platform Examples" workflow](compile-platform-examples.md)
+- ["Compile Platform Examples - Private Repo" workflow](compile-platform-examples-private.md)
+- ["Compile Sketches" workflow](compile-sketches.md)
+- ["Compile Sketches - Private Repo" workflow](compile-sketches-private.md)
+- ["Check Arduino" workflow](check-arduino.md)

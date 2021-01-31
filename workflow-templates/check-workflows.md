@@ -38,3 +38,8 @@ against the JSON schema.
 ```markdown
 On every push or pull request that affects the repository's GitHub Actions workflows, and periodically, validate them against the JSON schema.
 ```
+
+## Related
+
+- ["Check YAML" workflow](check-yaml.md)
+- ["Sync Labels" workflow](sync-labels.md)

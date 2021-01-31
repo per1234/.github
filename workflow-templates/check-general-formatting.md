@@ -51,3 +51,7 @@ On every push, pull request, and periodically, check whether the repository's fi
 ```markdown
 On every push, pull request, and periodically, use [editorconfig-checker](https://github.com/editorconfig-checker/editorconfig-checker) check whether the repository's files are formatted according to `.editorconfig`.
 ```
+
+## Related
+
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)

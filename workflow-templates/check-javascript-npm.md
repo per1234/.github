@@ -49,3 +49,8 @@ On every push and pull request that affects relevant files, and periodically, ru
 eslint is configured via the `.eslintrc.yml` file:
 https://eslint.org/docs/user-guide/configuring/configuration-files
 ```
+
+## Related
+
+- [`"Check TypeScript (NPM)" workflow](check-typescript-npm.md)
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
