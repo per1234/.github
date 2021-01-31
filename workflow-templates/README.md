@@ -22,6 +22,12 @@ Addition of, or requests for, any additional workflows that can be reusable betw
 
 **Note**: GitHub Actions periodically has outages which result in workflow failures unrelated to any problems with the contents of the repository or actions used by the workflow. In this event, the workflows will start passing again once the service recovers.
 
+## Dependabot
+
+Dependabot is used to check for outdated action versions used in the workflow templates. Details about that are [here](dependabot/README.md).
+
+The same can be done for the workflows of any repository. See the instructions [here](assets/dependabot/README.md).
+
 ## License
 
 Unless stated otherwise in the individual file or subfolder, the contents of this folder and subfolders are in the public domain, as defined by the [CC0 1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0/).
