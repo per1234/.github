@@ -1,0 +1,7 @@
+{
+  "name": "Check YAML",
+  "description": "Check the repository's YAML files.",
+  "iconName": "yaml",
+  "categories": ["YAML"],
+  "filePatterns": [".*\\.ya?ml$", "^\\.yamllint.*$"]
+}

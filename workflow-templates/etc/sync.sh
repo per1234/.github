@@ -12,6 +12,7 @@ cp \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/shared/.editorconfig" \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-markdown/.markdown-link-check.json" \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-markdown/.markdownlint.yml" \
+  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-yaml/.yamllint.yml" \
   "$REPOSITORY_ROOT_PATH"
 
 # Sync workflows.
@@ -19,6 +20,7 @@ cp \
   "${WORKFLOW_TEMPLATES_PATH}/check-markdown.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-prettier-formatting.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-shell.yml" \
+  "${WORKFLOW_TEMPLATES_PATH}/check-yaml.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/spell-check.yml" \
   "$WORKFLOWS_PATH"
 
