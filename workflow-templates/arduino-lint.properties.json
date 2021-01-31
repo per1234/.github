@@ -1,0 +1,5 @@
+{
+  "name": "Arduino Lint",
+  "description": "Arduino project-specific linting.",
+  "iconName": "Lint_logo_Type"
+}
