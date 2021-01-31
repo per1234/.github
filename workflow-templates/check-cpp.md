@@ -51,3 +51,10 @@ On every push and pull request that affects relevant files, and periodically, ru
 The .clang-format file is used to configure ClangFormat:
 https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 ```
+
+## Related
+
+- ["Check Arduino" workflow](check-arduino.md)
+- ["Compile Examples" workflow](compile-examples.md)
+- ["Compile Platform Examples" workflow](compile-platform-examples.md)
+- ["Compile Sketches" workflow](compile-sketches.md)

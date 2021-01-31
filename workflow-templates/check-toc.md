@@ -40,3 +40,7 @@ content.
 ```markdown
 On every push or pull request that affects the repository's README.md, use [markdown-toc](https://github.com/jonschlinkert/markdown-toc) to check whether the table of contents matches the content.
 ```
+
+## Related
+
+- ["Check Markdown" workflow](check-markdown.md)

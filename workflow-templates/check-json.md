@@ -53,3 +53,7 @@ On every push and pull request that affects relevant files, and periodically, Us
 eslint is configured via the .eslintrc.yml file:
 https://eslint.org/docs/user-guide/configuring/configuration-files
 ```
+
+## Related
+
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)

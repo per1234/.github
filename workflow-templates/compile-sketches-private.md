@@ -45,3 +45,8 @@ the specified boards. A report of the resulting change in memory usage of the ex
 ```markdown
 On every push and pull request that affects relevant files, and periodically, use [the `arduino/compile-sketches` action](https://github.com/arduino/compile-sketches) to compile all sketches in the repository for the specified boards. [The `arduino/report-size-deltas` action](https://github.com/arduino/report-size-deltas) is used to comment a report of the resulting change in memory usage of the examples to the PR thread.
 ```
+
+## Related
+
+- ["Report Size Deltas" workflow](report-size-deltas.md)
+- ["Check Arduino" workflow](check-arduino.md)

@@ -59,3 +59,9 @@ files is compliant with the Prettier style.
 ```markdown
 On every push and pull request that affects relevant files, and periodically, check whether the formatting of supported files is compliant with the [Prettier](https://prettier.io/docs/en/index.html) style.
 ```
+
+## Related
+
+- ["Spell Check" workflow](spell-check.md)
+- ["Check Markdown" workflow](check-markdown.md)
+- ["Check General Formatting" workflow](check-general-formatting.md)
