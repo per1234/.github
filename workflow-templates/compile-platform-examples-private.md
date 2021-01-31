@@ -44,3 +44,9 @@ to PR threads.
 ```markdown
 On every push or pull request that affects relevant files, and periodically, use [the `arduino/compile-sketches` action](https://github.com/arduino/compile-sketches) to compile example sketches of all bundled libraries for the specified boards. [The `arduino/report-size-deltas` action](https://github.com/arduino/report-size-deltas) is used to comment a report of the resulting change in memory usage of the examples to the PR thread.
 ```
+
+## Related
+
+- ["Report Size Deltas" workflow](report-size-deltas.md)
+- ["Arduino Lint" workflow](arduino-lint.md)
+- ["Release Platform"](release-platform.md)

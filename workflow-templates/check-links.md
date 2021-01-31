@@ -38,3 +38,8 @@ On every push, pull request, and periodically, check for broken links in the Mar
 ```markdown
 On every push, pull request, and periodically, run [markdown-link-check](https://github.com/tcort/markdown-link-check) to check for broken links in the Markdown files of the repository.
 ```
+
+## Related
+
+- ["Spell Check" workflow](spell-check.md)
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
