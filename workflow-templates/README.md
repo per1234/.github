@@ -9,3 +9,12 @@ Whenever possible, these workflows should be used as the models when setting up 
 Addition of, or requests for, any additional workflows that can be reusable between multiple Arduino repositories are welcome.
 
 ## Dependabot
+
+Dependabot is used to check for outdated action versions used in the workflow templates. Details about that are [here](dependabot/README.md).
+
+The same can be done for the workflows of any repository. Just copy [this file](dependabot/dependabot.yml) to the `/.github/` folder of the target repository (or add the entry if the repository already has a `/.github/dependabot.yml`) and everything else is handled automatically.
+
+**NOTE**: Dependabot's PRs will often try to pin to the patch version of the action (e.g., updating `uses: foo/bar@v1` to `uses: foo/bar@v2.3.4`). When the action author has provided a major version ref, it's usually best to use that instead (e.g., `uses: foo/bar@v2`). Using the major ref allows the workflows to automatically use the latest release version of the action as long as there have not been any breaking changes.
+
+More information:
+https://docs.github.com/en/github/administering-a-repository/keeping-your-actions-up-to-date-with-dependabot
