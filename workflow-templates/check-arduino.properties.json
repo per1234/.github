@@ -1,0 +1,13 @@
+{
+  "name": "Check Arduino",
+  "description": "Arduino project-specific linting.",
+  "iconName": "arduino-lint",
+  "categories": ["C++", "C"],
+  "filePatterns": [
+    ".*\\.ino$",
+    "^library\\.properties$",
+    "^keywords\\.txt$",
+    "^boards\\.txt",
+    "^package_.*index\\.json$"
+  ]
+}
