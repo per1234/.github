@@ -1,0 +1,5 @@
+{
+  "name": "Check Shell Formatting",
+  "description": "Check the formatting of the repository's shell scripts.",
+  "iconName": "shell"
+}
