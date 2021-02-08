@@ -1,0 +1,15 @@
+{
+  "name": "Check Python",
+  "description": "Check the repository's Python files.",
+  "iconName": "snake",
+  "categories": ["Python"],
+  "filePatterns": [
+    ".*\\.py$",
+    "^\\.flake8$",
+    "^pyproject\\.toml",
+    "^poetry\\.lock",
+    "^requirements.txt",
+    "setup.cfg",
+    "tox.ini"
+  ]
+}
