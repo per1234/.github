@@ -1,0 +1,19 @@
+{
+  "name": "Check C++",
+  "description": "Check the formatting of the repository's C-ish code files.",
+  "iconName": "arduino",
+  "categories": ["C++", "C"],
+  "filePatterns": [
+    ".*\\.cpp$",
+    ".*\\.c$",
+    ".*\\.h$",
+    ".*\\.hpp$",
+    ".*\\.tpp$",
+    ".*\\.ino$",
+    ".*\\.ipp$",
+    "^library\\.properties$",
+    "^keywords\\.txt$",
+    "^boards\\.txt",
+    "^\\.clang-format$"
+  ]
+}

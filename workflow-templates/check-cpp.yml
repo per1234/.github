@@ -1,0 +1,67 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-cpp.md
+name: Check C++
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-cpp.yml"
+      - ".clang-format"
+      - "**.ino"
+      - "**.h"
+      - "**.hpp"
+      - "**.hh"
+      - "**.hxx"
+      - "**.cpp"
+      - "**.cc"
+      - "**.cxx"
+      - "**.cp"
+      - "**.c"
+      - "**.ipp"
+      - "**.ii"
+      - "**.ixx"
+      - "**.inl"
+      - "**.tpp"
+      - "**.txx"
+      - "**.tpl"
+  pull_request:
+    paths:
+      - ".github/workflows/check-cpp.yml"
+      - ".clang-format"
+      - "**.ino"
+      - "**.h"
+      - "**.hpp"
+      - "**.hh"
+      - "**.hxx"
+      - "**.cpp"
+      - "**.cc"
+      - "**.cxx"
+      - "**.cp"
+      - "**.c"
+      - "**.ipp"
+      - "**.ii"
+      - "**.ixx"
+      - "**.inl"
+      - "**.tpp"
+      - "**.txx"
+      - "**.tpl"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Format
+        uses: DoozyX/clang-format-lint-action@v0.11
+        with:
+          clangFormatVersion: 11
+          exclude: ./.git
+          extensions: c,c++,cc,cp,cpp,cxx,h,h++,hh,hpp,hxx,ii,ino,inl,ipp,ixx,tpl,tpp,txx
+
+      - name: Check formatting
+        run: git diff --color --exit-code
