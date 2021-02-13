@@ -1,0 +1,26 @@
+# See: https://eslint.org/docs/user-guide/configuring/
+# The code style defined in this file is the official standardized style to be used in all Arduino projects and should
+# not be modified.
+
+extends: airbnb-base
+rules:
+  max-len:
+    - error
+    - code: 180
+  comma-dangle: "off"
+  no-console: "off"
+  padded-blocks: "off"
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+  spaced-comment: warn
+  quotes:
+    - error
+    - single
+    - allowTemplateLiterals: true
+  arrow-parens: "off"
+  consistent-return: "off"
+  no-useless-escape: "off"
+  no-underscore-dangle: "off"
+  import/prefer-default-export: "off"

@@ -1,0 +1,12 @@
+{
+  "name": "Check JavaScript (NPM)",
+  "description": "Lint JavaScript code (NPM).",
+  "iconName": "javascript",
+  "categories": ["JavaScript"],
+  "filePatterns": [
+    ".*\\.js$",
+    "^package\\.json$",
+    "^yarn\\.lock$",
+    "^lerna\\.json$"
+  ]
+}
