@@ -1,0 +1,15 @@
+{
+  "name": "Check Markdown",
+  "description": "Check Markdown files for problems.",
+  "iconName": "markdown",
+  "categories": ["Markdown"],
+  "filePatterns": [
+    ".*\\.mdx?$",
+    ".*\\.mkdn$",
+    ".*\\.mdown$",
+    ".*\\.markdown$",
+    "^\\.markdown-link-check.json$",
+    "^\\.markdownlint\\..*$",
+    "^\\.markdownlintignore$"
+  ]
+}
