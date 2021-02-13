@@ -1,0 +1,54 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-typescript-npm.md
+name: Check TypeScript (NPM)
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-typescript-npm.yml"
+      - "**/.eslintrc*"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - "**.js"
+      - "**.jsx"
+      - "**.ts"
+      - "**.tsx"
+  pull_request:
+    paths:
+      - ".github/workflows/check-typescript-npm.yml"
+      - "**/.eslintrc*"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - "**.js"
+      - "**.jsx"
+      - "**.ts"
+      - "**.tsx"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Load dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-dev-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-dev-
+
+      - name: Install dependencies
+        run: npm install --only=dev
+
+      - name: Lint
+        run: npm run-script lint

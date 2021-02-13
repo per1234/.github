@@ -1,0 +1,13 @@
+{
+  "name": "Check TypeScript (NPM)",
+  "description": "Lint TypeScript code.",
+  "iconName": "typescript",
+  "categories": ["TypeScript"],
+  "filePatterns": [
+    ".*\\.ts$",
+    "^tsconfig\\.json$",
+    "^package\\.json$",
+    "^yarn\\.lock$",
+    "^lerna\\.json$"
+  ]
+}
