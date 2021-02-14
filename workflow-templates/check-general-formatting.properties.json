@@ -1,0 +1,5 @@
+{
+  "name": "Check General Formatting",
+  "description": "Check the repository's files for compliance with the .editorconfig settings.",
+  "iconName": "star"
+}

@@ -16,6 +16,7 @@ cp \
 
 # Sync workflows.
 cp \
+  "${WORKFLOW_TEMPLATES_PATH}/check-general-formatting.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-markdown.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-prettier-formatting.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-shell.yml" \
