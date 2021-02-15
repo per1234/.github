@@ -1,0 +1,7 @@
+{
+  "name": "Check AsciiDoc",
+  "description": "Check for problems with AsciiDoc files.",
+  "iconName": "asciidoc",
+  "categories": ["AsciiDoc"],
+  "filePatterns": [".*\\.adoc", ".*\\.asc", ".*\\.asciidoc"]
+}
