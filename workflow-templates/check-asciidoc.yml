@@ -1,0 +1,91 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-asciidoc.md
+name: Check AsciiDoc
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-asciidoc.yml"
+      - "**.adc"
+      - "**.adoc"
+      - "**.asciidoc"
+  pull_request:
+    paths:
+      - ".github/workflows/check-asciidoc.yml"
+      - "**.adc"
+      - "**.adoc"
+      - "**.asciidoc"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by new checks added to ShellCheck.
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ruby # Install latest version
+
+      - name: Install AsciiDoctor
+        run: gem install asciidoctor
+
+      - name: Check syntax
+        run: |
+          find . \
+            -path './.git' -prune -or \
+            \( \
+              \( \
+                -name '*.asc' -or \
+                -name '*.adoc' -or \
+                -name '*.asciidoctor' \
+              \) \
+              -and -type f \
+            \) \
+            -exec \
+              asciidoctor \
+                --failure-level WARN \
+                --out-file /dev/null \
+                '{}' +
+
+  links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install asciidoc-link-check
+        run: sudo npm install --global asciidoc-link-check
+
+      - name: Check links
+        run: |
+          find . \
+            -path './.git' -prune -or \
+            \( \
+              \( \
+                -name '*.asc' -or \
+                -name '*.adoc' -or \
+                -name '*.asciidoctor' \
+              \) \
+              -and -type f \
+            \) \
+            -print0 \
+          | \
+          xargs \
+            -0 \
+            -L1 \
+            bash -c \
+              ' \
+                asciidoc-link-check \
+                --quiet \
+                --retry \
+                "$0" \
+              '
