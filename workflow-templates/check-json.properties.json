@@ -1,0 +1,7 @@
+{
+  "name": "Check JSON",
+  "description": "Check the repository's JSON files.",
+  "iconName": "json",
+  "categories": ["JSON"],
+  "filePatterns": [".*\\.json$"]
+}

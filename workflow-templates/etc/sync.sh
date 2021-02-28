@@ -12,11 +12,13 @@ cp \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-markdown/.markdown-link-check.json" \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-markdown/.markdownlint.yml" \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-yaml/.yamllint.yml" \
+  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-json/.eslintrc.yml" \
   "$REPOSITORY_ROOT_PATH"
 
 # Sync workflows.
 cp \
   "${WORKFLOW_TEMPLATES_PATH}/check-general-formatting.yml" \
+  "${WORKFLOW_TEMPLATES_PATH}/check-json.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-markdown.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-prettier-formatting.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-shell.yml" \

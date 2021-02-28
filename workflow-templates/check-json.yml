@@ -1,0 +1,52 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-json.md
+name: Check JSON
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-json.yml"
+      - "**/.eslintrc*"
+      - "**.json"
+      - "**.jsonc"
+      - "**.json5"
+  pull_request:
+    paths:
+      - ".github/workflows/check-json.yml"
+      - "**/.eslintrc*"
+      - "**.json"
+      - "**.jsonc"
+      - "**.json5"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get week number for use in cache key
+        id: get-date
+        run: |
+          echo "::set-output name=week-number::$(date --utc '+%V')"
+
+      - name: Load dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-eslint-plugin-jsonc-${{ steps.get-date.outputs.week-number }}
+          restore-keys: |
+            ${{ runner.os }}-node-eslint-plugin-jsonc-
+            ${{ runner.os }}-node-eslint-
+
+      - name: Install eslint
+        run: npm install --no-save eslint eslint-plugin-jsonc
+
+      - name: Lint
+        run: npx eslint --config .eslintrc.yml --no-eslintrc --ext .json,.jsonc,.json5 .
