@@ -1,0 +1,77 @@
+name: Check Configuration Files
+
+# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-configs.yml"
+      - "**/.eslintrc.yml"
+      - "**/.markdownlint.yml"
+      - "**/dependabot.yml"
+      - "workflow-templates/assets/sync-labels/*.yml"
+  pull_request:
+    paths:
+      - ".github/workflows/check-configs.yml"
+      - "**/.eslintrc.yml"
+      - "**/.markdownlint.yml"
+      - "**/dependabot.yml"
+      - "workflow-templates/assets/sync-labels/*.yml"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage resulting from changes to the JSON schema.
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  validate:
+    name: ${{ matrix.configuration.path }}
+    runs-on: ubuntu-latest
+
+    env:
+      # .eslintrc and dependabot.yml schemas are draft-04, which is unsupported by avj-cli 4.x
+      AJV_CLI_VERSION: 3.3.0
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        configuration:
+          - path: "**/.eslintrc.yml"
+            schema-url: https://json.schemastore.org/eslintrc
+          - path: "**/.markdownlint.yml"
+            schema-url: https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
+          - path: "**/dependabot.yml"
+            schema-url: https://json.schemastore.org/dependabot-2.0
+          - path: "workflow-templates/assets/sync-labels/*.yml"
+            schema-url: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.repository.default_branch }}/workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download JSON schema
+        id: download-schema
+        uses: carlosperate/download-file-action@v1.0.3
+        with:
+          # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/github-workflow.json
+          file-url: ${{ matrix.configuration.schema-url }}
+          location: ${{ runner.temp }}
+          file-name: schema.json
+
+      - name: Load dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-ajv-cli-${{ env.AJV_CLI_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-node-ajv-cli-
+
+      - name: Install JSON schema validator
+        run: sudo npm install --global ajv-cli@${{ env.AJV_CLI_VERSION }}
+
+      - name: Validate configuration files
+        run: |
+          # See: https://github.com/ajv-validator/ajv-cli#readme
+          ajv validate \
+            -s "${{ steps.download-schema.outputs.file-path }}" \
+            -d "${{ matrix.configuration.path }}"
