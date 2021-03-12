@@ -58,7 +58,7 @@ jobs:
           file-name: schema.json
 
       - name: Load dependencies cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-ajv-cli-${{ env.AJV_CLI_VERSION }}
