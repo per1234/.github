@@ -51,7 +51,7 @@ jobs:
           echo "::set-output name=week-number::$(date --utc '+%V')"
 
       - name: Load dependencies cache for the arduino/compile-sketches action
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/work/_actions/arduino/compile-sketches/main/compilesketches/.venv
           # The key name uses the week number to cause it to update weekly.
@@ -61,7 +61,7 @@ jobs:
             ${{ runner.os }}-arduino-compile-sketches-action-venv-
 
       - name: Load dependencies cache for the board
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.arduino15/staging
           key: ${{ runner.os }}-arduino-data-${{ steps.get-date.outputs.week-number }}
