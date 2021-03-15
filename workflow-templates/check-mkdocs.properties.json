@@ -1,0 +1,7 @@
+{
+  "name": "Check MkDocs Website",
+  "description": "Check for problems with a MkDocs-based static website.",
+  "iconName": "internet",
+  "categories": ["Markdown"],
+  "filePatterns": ["^mkdocs\\.ya?ml$"]
+}
