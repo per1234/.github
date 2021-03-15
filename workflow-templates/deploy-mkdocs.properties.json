@@ -1,0 +1,7 @@
+{
+  "name": "Deploy MkDocs Website",
+  "description": "Deploy MkDocs-based static website to GitHub Pages.",
+  "iconName": "internet",
+  "categories": ["Markdown"],
+  "filePatterns": ["^mkdocs\\.ya?ml$"]
+}
