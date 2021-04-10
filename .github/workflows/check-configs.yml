@@ -58,14 +58,6 @@ jobs:
           location: ${{ runner.temp }}
           file-name: schema.json
 
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-ajv-cli-${{ env.AJV_CLI_VERSION }}
-          restore-keys: |
-            ${{ runner.os }}-node-ajv-cli-
-
       - name: Install JSON schema validator
         run: sudo npm install --global ajv-cli@${{ env.AJV_CLI_VERSION }}
 

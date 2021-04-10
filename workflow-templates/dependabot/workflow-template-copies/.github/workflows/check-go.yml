@@ -33,14 +33,6 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
 
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
-
       - name: Check for errors
         run: task go:vet
 
@@ -57,14 +49,6 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
 
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
-
       - name: Check style
         run: task go:lint
 
@@ -80,14 +64,6 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
-
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
 
       - name: Format code
         run: task go:format

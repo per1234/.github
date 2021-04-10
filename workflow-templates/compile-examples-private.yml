@@ -44,29 +44,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Get week number for use in cache keys
-        id: get-date
-        run: |
-          echo "::set-output name=week-number::$(date --utc '+%V')"
-
-      - name: Load dependencies cache for the arduino/compile-sketches action
-        uses: actions/cache@v2
-        with:
-          path: ~/work/_actions/arduino/compile-sketches/main/compilesketches/.venv
-          # The key name uses the week number to cause it to update weekly.
-          key: ${{ runner.os }}-arduino-compile-sketches-action-venv-${{ steps.get-date.outputs.week-number }}
-          # The updated cache will be based on the existing one.
-          restore-keys: |
-            ${{ runner.os }}-arduino-compile-sketches-action-venv-
-
-      - name: Load dependencies cache for the board
-        uses: actions/cache@v2
-        with:
-          path: ~/.arduino15/staging
-          key: ${{ runner.os }}-arduino-data-${{ matrix.board.platforms }}-${{ steps.get-date.outputs.week-number }}
-          restore-keys: |
-            ${{ runner.os }}-arduino-data-${{ matrix.board.platforms }}-
-
       - name: Compile examples
         uses: arduino/compile-sketches@v1
         with:

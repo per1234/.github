@@ -37,19 +37,6 @@ jobs:
           file-url: https://raw.githubusercontent.com/arduino/.github/master/workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json
           location: ${{ runner.temp }}/label-configuration-schema
 
-      - name: Get week number for use in cache key
-        id: get-date
-        run: |
-          echo "::set-output name=week-number::$(date --utc '+%V')"
-
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-ajv-cli-${{ steps.get-date.outputs.week-number }}
-          restore-keys: |
-            ${{ runner.os }}-node-ajv-cli-
-
       - name: Install JSON schema validator
         run: sudo npm install --global ajv-cli
 
@@ -123,19 +110,6 @@ jobs:
         run: |
           # Merge all configuration files
           cat "${{ env.CONFIGURATIONS_FOLDER }}"/*.yml > "${{ env.MERGED_CONFIGURATION_PATH }}"
-
-      - name: Get week number for use in cache key
-        id: get-date
-        run: |
-          echo "::set-output name=week-number::$(date --utc '+%V')"
-
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-github-label-sync-${{ steps.get-date.outputs.week-number }}
-          restore-keys: |
-            ${{ runner.os }}-node-github-label-sync-
 
       - name: Install github-label-sync
         run: sudo npm install --global github-label-sync

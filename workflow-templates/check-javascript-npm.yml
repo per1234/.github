@@ -31,14 +31,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Load dependencies cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-dev-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-dev-
-
       - name: Install dependencies
         run: npm install --only=dev
 
