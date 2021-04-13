@@ -61,9 +61,6 @@ problems:
 - Use markdownlint to check for common problems and formatting.
 - Use markdown-link-check to check for broken links.
 
-use markdownlint to check whether the repository's Markdown files have
-common problems or non-compliant formatting.
-
 Arduino's Markdown style is defined by the `.markdownlint.yml` file.
 
 In the event the repository contains externally maintained Markdown files, markdownlint can be configured to ignore them
