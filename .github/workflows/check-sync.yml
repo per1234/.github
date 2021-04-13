@@ -8,7 +8,7 @@
 
 name: Check File Duplicates Sync
 
-# See: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+# See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:
   push:
   pull_request:
