@@ -7,7 +7,7 @@ on:
     paths:
       - ".github/workflows/check-yaml.yml"
       - ".yamllint*"
-      # Source: https://github.com/ikatyang/linguist-languages/blob/master/data/YAML.json (used by Prettier).
+      # Source: https://github.com/ikatyang/linguist-languages/blob/master/data/YAML.json (used by Prettier)
       - "**/.clang-format"
       - "**/.clang-tidy"
       - "**/.gemrc"
@@ -71,7 +71,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check YAML
-        # yamllint's "colored" output type is useful for humans reading the log.
         run: |
           find . \
             -path './.git' -prune -or \
