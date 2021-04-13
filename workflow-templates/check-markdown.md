@@ -55,7 +55,7 @@ Define the `{repository-owner}` and `{repository-name}` attributes and use them 
 ```
 Add CI workflow to check Markdown files for problems
 
-On every push and pull request that affects relevant files, and periodically, check the repository's shell scripts for
+On every push and pull request that affects relevant files, and periodically, check the repository's Markdown files for
 problems:
 
 - Use markdownlint to check for common problems and formatting.
@@ -74,7 +74,7 @@ https://github.com/igorshubovych/markdownlint-cli#ignoring-files
 ## PR message
 
 ```markdown
-On every push and pull request that affects relevant files, and periodically, check the repository's shell scripts for
+On every push and pull request that affects relevant files, and periodically, check the repository's Markdown files for
 problems:
 
 - Use [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) to check for common problems and formatting.

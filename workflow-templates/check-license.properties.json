@@ -1,6 +1,6 @@
 {
   "name": "Check License",
-  "description": "Check for issues with the repository's shell scripts.",
+  "description": "Check for issues with the repository's license file.",
   "iconName": "copyright",
   "filePatterns": [
     "^LICENSE(\\..+)?",
