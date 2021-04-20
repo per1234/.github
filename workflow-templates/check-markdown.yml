@@ -24,7 +24,7 @@ on:
       - "**.mdown"
       - "**.markdown"
   schedule:
-    # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to markdownlint.
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by external changes.
     - cron: "0 8 * * TUE"
   workflow_dispatch:
   repository_dispatch:
