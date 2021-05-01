@@ -9,6 +9,7 @@ on:
       - "**/.flake8"
       - "**/setup.cfg"
       - "**/tox.ini"
+      - "**/poetry.lock"
       - "**/pyproject.toml"
       - "**.py"
   pull_request:
@@ -17,6 +18,7 @@ on:
       - "**/.flake8"
       - "**/setup.cfg"
       - "**/tox.ini"
+      - "**/poetry.lock"
       - "**/pyproject.toml"
       - "**.py"
   schedule:
