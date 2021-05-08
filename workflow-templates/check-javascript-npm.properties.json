@@ -1,6 +1,6 @@
 {
-  "name": "Check JavaScript (NPM)",
-  "description": "Lint JavaScript code (NPM).",
+  "name": "Check JavaScript (npm)",
+  "description": "Lint JavaScript code. Version of the workflow for projects using npm.",
   "iconName": "javascript",
   "categories": ["JavaScript"],
   "filePatterns": [

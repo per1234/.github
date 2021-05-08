@@ -1,5 +1,5 @@
 # Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-typescript-npm.md
-name: Check TypeScript (NPM)
+name: Check TypeScript
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:

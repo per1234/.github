@@ -1,6 +1,6 @@
 {
-  "name": "Check TypeScript (NPM)",
-  "description": "Lint TypeScript code.",
+  "name": "Check TypeScript (npm)",
+  "description": "Lint TypeScript code. Version of the workflow for projects using npm.",
   "iconName": "typescript",
   "categories": ["TypeScript"],
   "filePatterns": [

@@ -1,8 +1,10 @@
-# "Check TypeScript (NPM)" workflow
+# "Check TypeScript" workflow (npm)
 
 Workflow file: [check-typescript-npm.yml](check-typescript-npm.yml)
 
-Use [eslint](https://eslint.org/) to lint and check formatting of the repository's TypeScript and JavaScript files. For projects that use NPM.
+Use [eslint](https://eslint.org/) to lint and check formatting of the repository's TypeScript and JavaScript files.
+
+For projects that use [npm](https://www.npmjs.com/).
 
 ## Assets
 
@@ -16,7 +18,7 @@ Use [eslint](https://eslint.org/) to lint and check formatting of the repository
 Markdown badge:
 
 ```markdown
-[![Check TypeScript (NPM) status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-typescript-npm.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-typescript-npm.yml)
+[![Check TypeScript status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-typescript-npm.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-typescript-npm.yml)
 ```
 
 Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final repository owner and name ([example](https://raw.githubusercontent.com/arduino-libraries/ArduinoIoTCloud/master/README.md)).
@@ -26,7 +28,7 @@ Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final
 Asciidoc badge:
 
 ```adoc
-image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-typescript-npm.yml/badge.svg["Check TypeScript (NPM) status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-typescript-npm.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-typescript-npm.yml/badge.svg["Check TypeScript status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-typescript-npm.yml"]
 ```
 
 Define the `{repository-owner}` and `{repository-name}` attributes and use them throughout the readme ([example](https://raw.githubusercontent.com/arduino-libraries/WiFiNINA/master/README.adoc)).
@@ -54,5 +56,5 @@ https://eslint.org/docs/user-guide/configuring/configuration-files
 
 ## Related
 
-- [`"Check JavaScript (NPM)" workflow](check-javascript-npm.md)
+- ["Check JavaScript" workflow (npm)](check-javascript-npm.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)

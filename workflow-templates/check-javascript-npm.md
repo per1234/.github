@@ -1,8 +1,10 @@
-# "Check JavaScript (NPM)" workflow
+# "Check JavaScript" workflow (npm)
 
 Workflow file: [check-javascript-npm.yml](check-javascript-npm.yml)
 
-Use [eslint](https://eslint.org/) to lint and check formatting of the repository's JavaScript code. For projects that use NPM.
+Use [eslint](https://eslint.org/) to lint and check formatting of the repository's JavaScript code.
+
+For projects that use [npm](https://www.npmjs.com/).
 
 ## Assets
 
@@ -54,5 +56,5 @@ https://eslint.org/docs/user-guide/configuring/configuration-files
 
 ## Related
 
-- [`"Check TypeScript (NPM)" workflow](check-typescript-npm.md)
+- [`"Check TypeScript" workflow (npm)](check-typescript-npm.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)

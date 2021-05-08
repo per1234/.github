@@ -1,5 +1,5 @@
 # Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-javascript-npm.md
-name: Check JavaScript (NPM)
+name: Check JavaScript
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:
