@@ -1,0 +1,15 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  general:check-spelling:
+    desc: Check for commonly misspelled words
+    cmds:
+      - poetry install --no-root
+      - poetry run codespell
+
+  general:correct-spelling:
+    desc: Correct commonly misspelled words where possible
+    cmds:
+      - poetry install --no-root
+      - poetry run codespell --write-changes
