@@ -6,11 +6,42 @@ Use [eslint](https://eslint.org/) to lint and check formatting of the repository
 
 For projects that use [npm](https://www.npmjs.com/).
 
+## Installation
+
+### 1. Add configuration files
+
+Copy the configuration files listed in the [**Assets**](#assets) section below into the project's repository.
+
+### 2. Install tool dependencies
+
+The tool dependencies of this workflow are managed by [npm](https://www.npmjs.com/).
+
+#### typescript-eslint
+
+Install **typescript-eslint** by following these instructions:<br />
+https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#installation
+
+#### eslint-config-airbnb-typescript
+
+Install **eslint-config-airbnb-typescript** by following these instructions:<br />
+https://github.com/iamturns/eslint-config-airbnb-typescript#1-install
+
+Install the related plugins by following these instructions:<br />
+https://github.com/iamturns/eslint-config-airbnb-typescript#2-install-eslint-plugins
+
+**Note:** the above link provides two separate commands: one for projects using [React](https://reactjs.org/), another for projects that don't use React.
+
+### 3. Add npm script
+
+Add the following [script](https://docs.npmjs.com/cli/v7/using-npm/scripts) to `package.json`:
+
+```json
+"lint": "eslint --ext .js,.jsx,.ts,.tsx ."
+```
+
 ## Assets
 
 - [`.eslintrc.yml`](assets/check-typescript/.eslintrc.yml) - eslint configuration file. The code style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
-  - Install to: repository root
-- [`package.json`](assets/check-typescript/package.json) - provides the workflow's dependencies and `lint` script.
   - Install to: repository root
 
 ## Readme badge
