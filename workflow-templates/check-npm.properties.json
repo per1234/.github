@@ -1,0 +1,7 @@
+{
+  "name": "Check npm",
+  "description": "Check the repository's npm configuration files.",
+  "iconName": "javascript",
+  "categories": ["JavaScript", "TypeScript"],
+  "filePatterns": ["^package\\.json$", "^package-lock\\.json$"]
+}

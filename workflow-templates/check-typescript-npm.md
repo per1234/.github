@@ -58,4 +58,5 @@ https://eslint.org/docs/user-guide/configuring/configuration-files
 
 - ["Check TypeScript" workflow (Task)](check-typescript-task.md)
 - ["Check JavaScript" workflow (npm)](check-javascript-npm.md)
+- ["Check npm" workflow](check-npm.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
