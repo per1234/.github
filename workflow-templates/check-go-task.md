@@ -43,3 +43,7 @@ repository's Go module.
 ```markdown
 On every push and pull request that affects relevant files, and periodically, lint and check formatting of the repository's [Golang](https://golang.org/) module.
 ```
+
+## Related
+
+- ["Test Go" workflow (Task)](test-go-task.md)
