@@ -1,0 +1,53 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-packaging-ncc-typescript-task.md
+name: Check Packaging
+
+on:
+  push:
+    paths:
+      - ".github/workflows/check-packaging-ncc-typescript-task.yml"
+      - "lerna.json"
+      - "package.json"
+      - "package-lock.json"
+      - "Taskfile.ya?ml"
+      - "tsconfig.json"
+      - "yarn.lock"
+      - "**.[jt]sx?"
+  pull_request:
+    paths:
+      - ".github/workflows/check-packaging-ncc-typescript-task.yml"
+      - "lerna.json"
+      - "package.json"
+      - "package-lock.json"
+      - "Taskfile.ya?ml"
+      - "tsconfig.json"
+      - "yarn.lock"
+      - "**.[jt]sx?"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check-packaging:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+
+      - name: Install Task
+        uses: arduino/actions/setup-taskfile@master
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          version: 3.x
+
+      - name: Build project
+        run: task ts:build
+
+      - name: Check packaging
+        # Ignoring CR because ncc's output has a mixture of line endings, while the repository should only contain
+        # Unix-style EOL.
+        run: git diff --ignore-cr-at-eol --color --exit-code dist

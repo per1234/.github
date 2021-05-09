@@ -1,0 +1,16 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  ts:install-deps:
+    desc: Install TypeScript dependencies
+    cmds:
+      - npm install
+
+  ts:build:
+    desc: Build the action's TypeScript code.
+    deps:
+      - task: ts:install-deps
+    cmds:
+      - npx tsc
+      - npx ncc build

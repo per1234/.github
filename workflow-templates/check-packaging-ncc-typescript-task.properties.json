@@ -1,0 +1,14 @@
+{
+  "name": "Check Packaging (ncc+TypeScript+Task)",
+  "description": "Check whether the ncc packaging is up to date. Version of the workflow for Task-based projects.",
+  "iconName": "typescript",
+  "categories": ["TypeScript"],
+  "filePatterns": [
+    ".*\\.ts$",
+    "^tsconfig\\.json$",
+    "^package\\.json$",
+    "^yarn\\.lock$",
+    "^lerna\\.json$",
+    "^Taskfile\\.ya?ml$"
+  ]
+}
