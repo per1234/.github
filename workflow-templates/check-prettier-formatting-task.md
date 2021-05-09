@@ -1,6 +1,6 @@
-# "Check Prettier Formatting" workflow
+# "Check Prettier Formatting" workflow (Task)
 
-Workflow file: [check-prettier-formatting.yml](check-prettier-formatting.yml)
+Workflow file: [check-prettier-formatting-task.yml](check-prettier-formatting-task.yml)
 
 Use [Prettier](https://prettier.io/docs/en/index.html) to check formatting. Supported languages include:
 
@@ -11,6 +11,13 @@ Use [Prettier](https://prettier.io/docs/en/index.html) to check formatting. Supp
 - JSON
 - Markdown
 - YAML
+
+This is the version of the workflow for projects using the [Task](https://taskfile.dev/#/) task runner tool.
+
+## Assets
+
+- [`Taskfile.yml`](assets/check-prettier-formatting-task/Taskfile.yml] - Formatting task.
+  - Install to: repository root
 
 ## Configuration
 
@@ -30,7 +37,7 @@ The default Prettier code style is the official standardized style to be used in
 Markdown badge:
 
 ```markdown
-[![Check Prettier Formatting status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-prettier-formatting.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-prettier-formatting.yml)
+[![Check Prettier Formatting status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-prettier-formatting-task.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-prettier-formatting-task.yml)
 ```
 
 Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final repository owner and name ([example](https://raw.githubusercontent.com/arduino-libraries/ArduinoIoTCloud/master/README.md)).
@@ -40,7 +47,7 @@ Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final
 Asciidoc badge:
 
 ```adoc
-image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-prettier-formatting.yml/badge.svg["Check Prettier Formatting status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-prettier-formatting.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-prettier-formatting-task.yml/badge.svg["Check Prettier Formatting status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-prettier-formatting-task.yml"]
 ```
 
 Define the `{repository-owner}` and `{repository-name}` attributes and use them throughout the readme ([example](https://raw.githubusercontent.com/arduino-libraries/WiFiNINA/master/README.adoc)).
@@ -62,7 +69,7 @@ On every push and pull request that affects relevant files, and periodically, ch
 
 ## Related
 
-- ["Check Prettier Formatting" workflow (Task)](check-prettier-formatting-task.md)
+- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
 - ["Spell Check" workflow](spell-check.md)
 - ["Check Markdown" workflow](check-markdown.md)
 - ["Check General Formatting" workflow](check-general-formatting.md)

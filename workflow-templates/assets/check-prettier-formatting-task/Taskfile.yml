@@ -1,0 +1,8 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  general:format-prettier:
+    desc: Format all supported files with Prettier
+    cmds:
+      - npx prettier --write .
