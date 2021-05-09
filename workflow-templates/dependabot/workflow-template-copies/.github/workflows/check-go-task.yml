@@ -1,16 +1,16 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-go.md
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-go-task.md
 name: Check Go
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:
   push:
     paths:
-      - ".github/workflows/check-go.ya?ml"
+      - ".github/workflows/check-go-task.ya?ml"
       - "Taskfile.ya?ml"
       - "**.go"
   pull_request:
     paths:
-      - ".github/workflows/check-go.ya?ml"
+      - ".github/workflows/check-go-task.ya?ml"
       - "Taskfile.ya?ml"
       - "**.go"
   schedule:
