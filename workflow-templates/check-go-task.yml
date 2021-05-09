@@ -54,7 +54,7 @@ jobs:
           version: 3.x
 
       - name: Check style
-        run: task go:lint
+        run: task --silent go:lint
 
   check-formatting:
     runs-on: ubuntu-latest
