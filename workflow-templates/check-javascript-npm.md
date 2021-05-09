@@ -4,6 +4,8 @@ Workflow file: [check-javascript-npm.yml](check-javascript-npm.yml)
 
 Use [eslint](https://eslint.org/) to lint and check formatting of the repository's JavaScript code.
 
+**Note:** This workflow is focused on linting. Formatting checks for JavaScript are provided by the ["Check Prettier Formatting" workflow (npm)](check-prettier-formatting-npm.md), so both should be used.
+
 For projects that use [npm](https://www.npmjs.com/).
 
 ## Installation
@@ -28,6 +30,11 @@ npm install --save-dev eslint
 
 Install **eslint-config-airbnb-typescript** by following these instructions:<br />
 https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#eslint-config-airbnb-base-1
+
+#### eslint-config-prettier
+
+Install **eslint-config-prettier** by following these instructions:<br />
+https://github.com/prettier/eslint-config-prettier/#installation
 
 ### 3. Add npm script
 
@@ -87,4 +94,4 @@ https://eslint.org/docs/user-guide/configuring/configuration-files
 
 - ["Check TypeScript" workflow (npm)](check-typescript-npm.md)
 - ["Check npm" workflow](check-npm.md)
-- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
+- ["Check Prettier Formatting" workflow (npm)](check-prettier-formatting-npm.md)
