@@ -1,0 +1,6 @@
+{
+  "name": "Check Action Metadata (Task)",
+  "description": "Validate the action.yml GitHub Actions action metadata file against its JSON schema. Version of the workflow for Task-based projects.",
+  "iconName": "action",
+  "filePatterns": ["^action\\.ya?ml$", "^Taskfile\\.ya?ml$"]
+}
