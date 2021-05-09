@@ -1,0 +1,15 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  python:lint:
+    desc: Lint Python code
+    cmds:
+      - poetry install --no-root
+      - poetry run flake8 --show-source
+
+  python:format:
+    desc: Automatically formats Python files
+    cmds:
+      - poetry install --no-root
+      - poetry run black .

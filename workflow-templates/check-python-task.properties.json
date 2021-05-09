@@ -1,0 +1,16 @@
+{
+  "name": "Check Python (Task)",
+  "description": "Check the repository's Python files. Version of the workflow for Task-based projects.",
+  "iconName": "snake",
+  "categories": ["Python"],
+  "filePatterns": [
+    ".*\\.py$",
+    "^\\.flake8$",
+    "^pyproject\\.toml",
+    "^poetry\\.lock",
+    "^requirements.txt",
+    "setup.cfg",
+    "^Taskfile\\.ya?ml$",
+    "tox.ini"
+  ]
+}

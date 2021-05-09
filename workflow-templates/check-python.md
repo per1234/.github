@@ -53,3 +53,7 @@ On every push and pull request that affects relevant files, and periodically, ru
 The `.flake8` file is used to configure `flake8`:
 https://flake8.pycqa.org/en/latest/user/configuration.html
 ```
+
+## Related
+
+- ["Check Python" workflow (Task)](check-python-task.md)
