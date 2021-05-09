@@ -2,7 +2,9 @@
 
 Workflow file: [check-typescript-task.yml](check-typescript-task.yml)
 
-Use [eslint](https://eslint.org/) to lint and check formatting of the repository's TypeScript and JavaScript files.
+Use [eslint](https://eslint.org/) to lint the repository's TypeScript and JavaScript files.
+
+**Note:** This workflow is focused on linting. Formatting checks for TypeScript are provided by the ["Check Prettier Formatting" workflow (Task)](check-prettier-formatting-task.md), so both should be used.
 
 This is the version of the workflow for projects using the [Task](https://taskfile.dev/#/) task runner tool.
 
@@ -30,6 +32,11 @@ Install the related plugins by following these instructions:<br />
 https://github.com/iamturns/eslint-config-airbnb-typescript#2-install-eslint-plugins
 
 **Note:** the above link provides two separate commands: one for projects using [React](https://reactjs.org/), another for projects that don't use React.
+
+#### eslint-config-prettier
+
+Install **eslint-config-prettier** by following these instructions:<br />
+https://github.com/prettier/eslint-config-prettier/#installation
 
 ## Assets
 
@@ -84,4 +91,4 @@ https://eslint.org/docs/user-guide/configuring/configuration-files
 - ["Check TypeScript" workflow (npm)](check-typescript-npm.md)
 - ["Check TypeScript Configuration" workflow](check-tsconfig.md)
 - ["Check npm" workflow](check-npm.md)
-- ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
+- ["Check Prettier Formatting" workflow (Task)](check-prettier-formatting-task.md)
