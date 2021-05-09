@@ -1,0 +1,15 @@
+{
+  "name": "Test JavaScript (Jest, Task)",
+  "description": "Test JavaScript/TypeScript code using Jest. Version of the workflow for Task-based projects.",
+  "iconName": "javascript",
+  "categories": ["JavaScript", "TypeScript"],
+  "filePatterns": [
+    "^jest\\.config\\.[jt]s$",
+    "^lerna\\.json$",
+    "^package\\.json$",
+    "^Taskfile\\.ya?ml$",
+    "^tsconfig\\.json$",
+    "^yarn\\.lock$",
+    ".*\\.[jt]sx?$"
+  ]
+}

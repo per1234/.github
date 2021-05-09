@@ -1,0 +1,15 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  js:install-deps:
+    desc: Install JavaScript/TypeScript dependencies
+    cmds:
+      - npm install
+
+  js:test:
+    desc: Test the action's JavaScript/TypeScript code.
+    deps:
+      - task: js:install-deps
+    cmds:
+      - npx jest

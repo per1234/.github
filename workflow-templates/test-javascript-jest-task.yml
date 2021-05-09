@@ -1,0 +1,50 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/test-javascript-jest-task.md
+name: Test JavaScript
+
+on:
+  push:
+    paths:
+      - ".github/workflows/test-javascript-jest-task.ya?ml"
+      - "jest.config.[jt]s"
+      - "lerna.json"
+      - "package.json"
+      - "package-lock.json"
+      - "Taskfile.ya?ml"
+      - "tsconfig.json"
+      - "yarn.lock"
+      - "**.[jt]sx?"
+  pull_request:
+    paths:
+      - ".github/workflows/test-javascript-jest-task.ya?ml"
+      - "jest.config.[jt]s"
+      - "lerna.json"
+      - "package.json"
+      - "package-lock.json"
+      - "Taskfile.ya?ml"
+      - "tsconfig.json"
+      - "yarn.lock"
+      - "**.[jt]sx?"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set Node.js 10.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+
+      - name: Install Task
+        uses: arduino/actions/setup-taskfile@master
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          version: 3.x
+
+      - name: Run tests
+        run: task js:test
