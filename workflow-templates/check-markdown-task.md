@@ -1,6 +1,6 @@
-# "Check Markdown" workflow
+# "Check Markdown" workflow (Task)
 
-Workflow file: [check-markdown.yml](check-markdown.yml)
+Workflow file: [check-markdown-task.yml](check-markdown-task.yml)
 
 Check the repository's Markdown files for problems:
 
@@ -9,11 +9,15 @@ Check the repository's Markdown files for problems:
 
 NOTE: This workflow is focused on linting. Formatting checks for Markdown are provided by the ["Check Prettier Formatting" workflow](check-prettier-formatting.md), so both should be used.
 
+This is the version of the workflow for projects using the [Task](https://taskfile.dev/#/) task runner tool.
+
 ## Assets
 
 - [`.markdown-link-check.json`](assets/check-markdown/.markdown-link-check.json) - markdown-link-check configuration file.
   - Install to: repository root
 - [`.markdownlint.yml`](assets/check-markdown/.markdownlint.yml) - markdownlint configuration file.
+  - Install to: repository root
+- [`Taskfile.yml`](assets/check-markdown-task/Taskfile.yml] - Markdown tasks.
   - Install to: repository root
 
 The code style defined in `.markdownlint.yml` is the official standardized style to be used in all Arduino projects and should not be modified.
@@ -35,7 +39,7 @@ https://github.com/gaurav-nelson/github-action-markdown-link-check#user-content-
 Markdown badge:
 
 ```markdown
-[![Check Markdown status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-markdown.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-markdown.yml)
+[![Check Markdown status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-markdown-task.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-markdown-task.yml)
 ```
 
 Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final repository owner and name ([example](https://raw.githubusercontent.com/arduino-libraries/ArduinoIoTCloud/master/README.md)).
@@ -45,7 +49,7 @@ Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final
 Asciidoc badge:
 
 ```adoc
-image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-markdown.yml/badge.svg["Check Markdown status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-markdown.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-markdown-task.yml/badge.svg["Check Markdown status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-markdown-task.yml"]
 ```
 
 Define the `{repository-owner}` and `{repository-name}` attributes and use them throughout the readme ([example](https://raw.githubusercontent.com/arduino-libraries/WiFiNINA/master/README.adoc)).
@@ -91,7 +95,7 @@ https://github.com/tcort/markdown-link-check#config-file-format
 
 ## Related
 
-- ["Check Markdown" workflow (Task)](check-markdown-task.md)
+- ["Check Markdown" workflow](check-markdown.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
 - ["Spell Check" workflow](spell-check.md)
 - ["Check ToC" workflow](check-toc.md)
