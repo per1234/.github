@@ -5,21 +5,19 @@ name: Check Markdown
 on:
   push:
     paths:
-      - ".github/workflows/check-markdown.yml"
+      - ".github/workflows/check-markdown.ya?ml"
       - ".markdown-link-check.json"
       - "**/.markdownlint*"
-      - "**.md"
-      - "**.mdx"
+      - "**.mdx?"
       - "**.mkdn"
       - "**.mdown"
       - "**.markdown"
   pull_request:
     paths:
-      - ".github/workflows/check-markdown.yml"
+      - ".github/workflows/check-markdown.ya?ml"
       - ".markdown-link-check.json"
       - "**/.markdownlint*"
-      - "**.md"
-      - "**.mdx"
+      - "**.mdx?"
       - "**.mkdn"
       - "**.mdown"
       - "**.markdown"

@@ -5,18 +5,14 @@ name: Check JSON
 on:
   push:
     paths:
-      - ".github/workflows/check-json.yml"
+      - ".github/workflows/check-json.ya?ml"
       - "**/.eslintrc*"
-      - "**.json"
-      - "**.jsonc"
-      - "**.json5"
+      - "**.json[c5]?"
   pull_request:
     paths:
-      - ".github/workflows/check-json.yml"
+      - ".github/workflows/check-json.ya?ml"
       - "**/.eslintrc*"
-      - "**.json"
-      - "**.jsonc"
-      - "**.json5"
+      - "**.json[c5]?"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.
     - cron: "0 8 * * TUE"

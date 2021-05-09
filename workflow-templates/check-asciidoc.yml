@@ -5,13 +5,13 @@ name: Check AsciiDoc
 on:
   push:
     paths:
-      - ".github/workflows/check-asciidoc.yml"
+      - ".github/workflows/check-asciidoc.ya?ml"
       - "**.adc"
       - "**.adoc"
       - "**.asciidoc"
   pull_request:
     paths:
-      - ".github/workflows/check-asciidoc.yml"
+      - ".github/workflows/check-asciidoc.ya?ml"
       - "**.adc"
       - "**.adoc"
       - "**.asciidoc"

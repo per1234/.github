@@ -5,12 +5,12 @@ name: Check ToC
 on:
   push:
     paths:
-      - ".github/workflows/check-toc.yml"
+      - ".github/workflows/check-toc.ya?ml"
       # TODO: Update this if ToC of any other files should be checked.
       - "README.md"
   pull_request:
     paths:
-      - ".github/workflows/check-toc.yml"
+      - ".github/workflows/check-toc.ya?ml"
       - "README.md"
   workflow_dispatch:
   repository_dispatch:

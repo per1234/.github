@@ -5,7 +5,7 @@ name: Check Python
 on:
   push:
     paths:
-      - ".github/workflows/check-python.yml"
+      - ".github/workflows/check-python.ya?ml"
       - "**/.flake8"
       - "**/setup.cfg"
       - "**/tox.ini"
@@ -14,7 +14,7 @@ on:
       - "**.py"
   pull_request:
     paths:
-      - ".github/workflows/check-python.yml"
+      - ".github/workflows/check-python.ya?ml"
       - "**/.flake8"
       - "**/setup.cfg"
       - "**/tox.ini"

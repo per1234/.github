@@ -5,13 +5,13 @@ name: Check Go
 on:
   push:
     paths:
-      - ".github/workflows/check-go.yml"
-      - "Taskfile.yml"
+      - ".github/workflows/check-go.ya?ml"
+      - "Taskfile.ya?ml"
       - "**.go"
   pull_request:
     paths:
-      - ".github/workflows/check-go.yml"
-      - "Taskfile.yml"
+      - ".github/workflows/check-go.ya?ml"
+      - "Taskfile.ya?ml"
       - "**.go"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.

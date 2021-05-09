@@ -5,13 +5,13 @@ name: Compile Examples
 on:
   push:
     paths:
-      - ".github/workflows/compile-examples.yml"
+      - ".github/workflows/compile-examples.ya?ml"
       - "library.properties"
       - "examples/**"
       - "src/**"
   pull_request:
     paths:
-      - ".github/workflows/compile-examples.yml"
+      - ".github/workflows/compile-examples.ya?ml"
       - "library.properties"
       - "examples/**"
       - "src/**"

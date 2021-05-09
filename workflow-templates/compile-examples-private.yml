@@ -5,13 +5,13 @@ name: Compile Examples - Private Repo
 on:
   push:
     paths:
-      - ".github/workflows/compile-examples-private.yml"
+      - ".github/workflows/compile-examples-private.ya?ml"
       - "library.properties"
       - "examples/**"
       - "src/**"
   pull_request:
     paths:
-      - ".github/workflows/compile-examples-private.yml"
+      - ".github/workflows/compile-examples-private.ya?ml"
       - "library.properties"
       - "examples/**"
       - "src/**"

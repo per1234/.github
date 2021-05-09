@@ -5,13 +5,13 @@ name: Check Shell Scripts
 on:
   push:
     paths:
-      - ".github/workflows/check-shell.yml"
+      - ".github/workflows/check-shell.ya?ml"
       - "**/.editorconfig"
       - "**.bash"
       - "**.sh"
   pull_request:
     paths:
-      - ".github/workflows/check-shell.yml"
+      - ".github/workflows/check-shell.ya?ml"
       - "**/.editorconfig"
       - "**.bash"
       - "**.sh"

@@ -6,7 +6,7 @@ on:
   push:
     paths-ignore:
       - ".github/**"
-      - "!.github/workflows/compile-sketches.yml"
+      - "!.github/workflows/compile-sketches.ya?ml"
       - "**.adoc"
       - "**.jpg"
       - "**.md"
@@ -15,7 +15,7 @@ on:
   pull_request:
     paths-ignore:
       - ".github/**"
-      - "!.github/workflows/compile-sketches.yml"
+      - "!.github/workflows/compile-sketches.ya?ml"
       - "**.adoc"
       - "**.jpg"
       - "**.md"

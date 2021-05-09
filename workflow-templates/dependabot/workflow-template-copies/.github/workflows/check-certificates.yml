@@ -5,10 +5,10 @@ name: Check Certificates
 on:
   push:
     paths:
-      - ".github/workflows/check-certificates.yml"
+      - ".github/workflows/check-certificates.ya?ml"
   pull_request:
     paths:
-      - ".github/workflows/check-certificates.yml"
+      - ".github/workflows/check-certificates.ya?ml"
   schedule:
     # Run every 10 hours.
     - cron: "0 */10 * * *"

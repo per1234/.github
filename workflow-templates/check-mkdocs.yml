@@ -5,13 +5,13 @@ name: Check documentation website
 on:
   push:
     paths:
-      - ".github/workflows/check-mkdocs.yml"
-      - "mkdocs.yml"
+      - ".github/workflows/check-mkdocs.ya?ml"
+      - "mkdocs.ya?ml"
       - "docs/**"
   pull_request:
     paths:
-      - ".github/workflows/check-mkdocs.yml"
-      - "mkdocs.yml"
+      - ".github/workflows/check-mkdocs.ya?ml"
+      - "mkdocs.ya?ml"
       - "docs/**"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to external tools.

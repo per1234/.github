@@ -5,12 +5,12 @@ name: Test C++
 on:
   push:
     paths:
-      - ".github/workflows/test-cpp.yml"
+      - ".github/workflows/test-cpp.ya?ml"
       - "extras/test/**"
       - "src/**"
   pull_request:
     paths:
-      - ".github/workflows/test-cpp.yml"
+      - ".github/workflows/test-cpp.ya?ml"
       - "extras/test/**"
       - "src/**"
   workflow_dispatch:

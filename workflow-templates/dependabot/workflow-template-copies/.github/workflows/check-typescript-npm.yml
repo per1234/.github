@@ -5,26 +5,20 @@ name: Check TypeScript
 on:
   push:
     paths:
-      - ".github/workflows/check-typescript-npm.yml"
+      - ".github/workflows/check-typescript-npm.ya?ml"
       - "**/.eslintrc*"
       - "package.json"
       - "package-lock.json"
       - "tsconfig.json"
-      - "**.js"
-      - "**.jsx"
-      - "**.ts"
-      - "**.tsx"
+      - "**.[jt]sx?"
   pull_request:
     paths:
-      - ".github/workflows/check-typescript-npm.yml"
+      - ".github/workflows/check-typescript-npm.ya?ml"
       - "**/.eslintrc*"
       - "package.json"
       - "package-lock.json"
       - "tsconfig.json"
-      - "**.js"
-      - "**.jsx"
-      - "**.ts"
-      - "**.tsx"
+      - "**.[jt]sx?"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.
     - cron: "0 8 * * TUE"

@@ -5,41 +5,34 @@ name: Check YAML
 on:
   push:
     paths:
-      - ".github/workflows/check-yaml.yml"
+      - ".github/workflows/check-yaml.ya?ml"
       - ".yamllint*"
       # Source: https://github.com/ikatyang/linguist-languages/blob/master/data/YAML.json (used by Prettier)
       - "**/.clang-format"
       - "**/.clang-tidy"
       - "**/.gemrc"
       - "**/glide.lock"
-      - "**.yml"
+      - "**.ya?ml*"
       - "**.mir"
       - "**.reek"
       - "**.rviz"
       - "**.sublime-syntax"
       - "**.syntax"
-      - "**.yaml"
-      - "**.yaml-tmlanguage"
-      - "**.yaml.sed"
-      - "**.yml.mysql"
   pull_request:
     paths:
-      - ".github/workflows/check-yaml.yml"
+      - ".github/workflows/check-yaml.ya?ml"
       - ".yamllint*"
+      # Source: https://github.com/ikatyang/linguist-languages/blob/master/data/YAML.json (used by Prettier)
       - "**/.clang-format"
       - "**/.clang-tidy"
       - "**/.gemrc"
       - "**/glide.lock"
-      - "**.yml"
+      - "**.ya?ml*"
       - "**.mir"
       - "**.reek"
       - "**.rviz"
       - "**.sublime-syntax"
       - "**.syntax"
-      - "**.yaml"
-      - "**.yaml-tmlanguage"
-      - "**.yaml.sed"
-      - "**.yml.mysql"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to yamllint.
     - cron: "0 8 * * TUE"

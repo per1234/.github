@@ -8,8 +8,8 @@ on:
       # TODO: Replace "$default-branch" below with the default branch name if it was not replaced already.
       - $default-branch
     paths:
-      - ".github/workflows/deploy-mkdocs.yml"
-      - "mkdocs.yml"
+      - ".github/workflows/deploy-mkdocs.ya?ml"
+      - "mkdocs.ya?ml"
       - "docs/**"
   workflow_dispatch:
   repository_dispatch:

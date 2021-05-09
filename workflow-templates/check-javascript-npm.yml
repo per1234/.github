@@ -5,18 +5,16 @@ name: Check JavaScript
 on:
   push:
     paths:
-      - ".github/workflows/check-javascript-npm.yml"
+      - ".github/workflows/check-javascript-npm.ya?ml"
       - "**/.eslintrc*"
       - "package.json"
-      - "**.js"
-      - "**.jsx"
+      - "**.jsx?"
   pull_request:
     paths:
-      - ".github/workflows/check-javascript-npm.yml"
+      - ".github/workflows/check-javascript-npm.ya?ml"
       - "**/.eslintrc*"
       - "package.json"
-      - "**.js"
-      - "**.jsx"
+      - "**.jsx?"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.
     - cron: "0 8 * * TUE"
