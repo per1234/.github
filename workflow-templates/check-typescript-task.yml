@@ -1,0 +1,49 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-typescript-task.md
+name: Check TypeScript
+
+# See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-typescript-task.ya?ml"
+      - ".eslintignore"
+      - "**/.eslintrc*"
+      - "package.json"
+      - "package-lock.json"
+      - "Taskfile.ya?ml"
+      - "tsconfig.eslint.json"
+      - "tsconfig.json"
+      - "**.[jt]sx?"
+  pull_request:
+    paths:
+      - ".github/workflows/check-typescript-task.ya?ml"
+      - ".eslintignore"
+      - "**/.eslintrc*"
+      - "package.json"
+      - "package-lock.json"
+      - "Taskfile.ya?ml"
+      - "tsconfig.eslint.json"
+      - "tsconfig.json"
+      - "**.[jt]sx?"
+  schedule:
+    # Run every Tuesday at 8 AM UTC to catch breakage caused by changes to tools.
+    - cron: "0 8 * * TUE"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Task
+        uses: arduino/actions/setup-taskfile@master
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          version: 3.x
+
+      - name: Lint
+        run: task ts:lint

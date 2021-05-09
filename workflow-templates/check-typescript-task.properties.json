@@ -1,0 +1,14 @@
+{
+  "name": "Check TypeScript (Task)",
+  "description": "Lint TypeScript code. Version of the workflow for projects using Task.",
+  "iconName": "typescript",
+  "categories": ["TypeScript"],
+  "filePatterns": [
+    ".*\\.ts$",
+    "^tsconfig\\.json$",
+    "^package\\.json$",
+    "^yarn\\.lock$",
+    "^lerna\\.json$",
+    "^Taskfile\\.ya?ml$"
+  ]
+}
