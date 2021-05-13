@@ -1,5 +1,5 @@
 # Source: https://github.com/arduino/.github/blob/master/workflow-templates/compile-sketches-private.md
-name: Compile Sketches - Private Repo
+name: Compile Sketches
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:

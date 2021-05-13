@@ -1,4 +1,4 @@
-# "Compile Examples - Private Repo" workflow
+# "Compile Examples" workflow (private repos)
 
 Workflow file: [compile-examples-private.yml](compile-examples-private.yml)
 

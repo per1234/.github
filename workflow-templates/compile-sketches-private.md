@@ -1,4 +1,4 @@
-# "Compile Sketches - Private Repo" workflow
+# "Compile Sketches" workflow (Private Repo)
 
 Workflow file: [compile-sketches-private.yml](compile-sketches-private.yml)
 

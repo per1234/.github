@@ -1,5 +1,5 @@
 {
-  "name": "Compile Platform Examples - Private Repo",
+  "name": "Compile Platform Examples (Private Repo)",
   "description": "\"Smoke test\" Arduino platform by compiling example sketches of bundled libraries. Configured for use in private repositories.",
   "iconName": "arduino",
   "categories": ["C++", "C"],
