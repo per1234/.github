@@ -43,7 +43,7 @@ jobs:
         run: pip install poetry
 
       - name: Install Task
-        uses: arduino/actions/setup-taskfile@master
+        uses: arduino/setup-task@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
@@ -67,7 +67,7 @@ jobs:
         run: pip install poetry
 
       - name: Install Task
-        uses: arduino/actions/setup-taskfile@master
+        uses: arduino/setup-task@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
