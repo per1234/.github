@@ -1,0 +1,6 @@
+{
+  "name": "Check Taskfiles",
+  "description": "Validate Taskfiles against the JSON schema.",
+  "iconName": "cube",
+  "filePatterns": ["^[Tt]askfile.*\\.ya?ml$"]
+}
