@@ -1,4 +1,4 @@
-# "Compile Platform Examples" workflow (Private Repo)
+# "Compile Examples" workflow (boards platform, private repo)
 
 Workflow file: [compile-platform-examples-private.yml](compile-platform-examples-private.yml)
 

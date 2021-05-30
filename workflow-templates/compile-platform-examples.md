@@ -1,4 +1,4 @@
-# "Compile Platform Examples" workflow
+# "Compile Examples" workflow (boards platform)
 
 Workflow file: [compile-platform-examples.yml](compile-platform-examples.yml)
 

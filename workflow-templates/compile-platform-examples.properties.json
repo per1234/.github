@@ -1,5 +1,5 @@
 {
-  "name": "Compile Platform Examples",
+  "name": "Compile Examples (boards platform)",
   "description": "\"Smoke test\" Arduino platform by compiling example sketches of bundled libraries.",
   "iconName": "arduino",
   "categories": ["C++", "C"],
