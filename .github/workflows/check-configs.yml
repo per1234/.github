@@ -39,10 +39,13 @@ jobs:
       matrix:
         configuration:
           - path: "**/.eslintrc.yml"
+            # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json
             schema-url: https://json.schemastore.org/eslintrc
           - path: "**/.markdownlint.yml"
+            # See: https://github.com/DavidAnson/markdownlint/blob/main/schema/markdownlint-config-schema.json
             schema-url: https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
           - path: "**/dependabot.yml"
+            # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/dependabot-2.0.json
             schema-url: https://json.schemastore.org/dependabot-2.0
           - path: "workflow-templates/assets/sync-labels/*.yml"
             schema-path: "workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json"
@@ -56,7 +59,6 @@ jobs:
         if: matrix.configuration.schema-url != ''
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/github-workflow.json
           file-url: ${{ matrix.configuration.schema-url }}
           location: ${{ runner.temp }}
           file-name: schema.json
