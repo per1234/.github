@@ -45,7 +45,7 @@ jobs:
           - path: "**/dependabot.yml"
             schema-url: https://json.schemastore.org/dependabot-2.0
           - path: "workflow-templates/assets/sync-labels/*.yml"
-            schema-url: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.repository.default_branch }}/workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json
+            schema-path: "workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json"
 
     steps:
       - name: Checkout repository
@@ -53,6 +53,7 @@ jobs:
 
       - name: Download JSON schema
         id: download-schema
+        if: matrix.configuration.schema-url != ''
         uses: carlosperate/download-file-action@v1.0.3
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/github-workflow.json
@@ -67,5 +68,5 @@ jobs:
         run: |
           # See: https://github.com/ajv-validator/ajv-cli#readme
           ajv validate \
-            -s "${{ steps.download-schema.outputs.file-path }}" \
+            -s "${{ steps.download-schema.outputs.file-path }}${{ matrix.configuration.schema-path }}" \
             -d "${{ matrix.configuration.path }}"
