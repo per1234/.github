@@ -1,3 +1,4 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/assets/test-go-task/Taskfile.yml
 # See: https://taskfile.dev/#/usage
 version: "3"
 

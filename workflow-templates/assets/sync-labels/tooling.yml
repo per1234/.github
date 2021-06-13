@@ -1,3 +1,4 @@
+# Source: https://github.com/arduino/.github/blob/master/workflow-templates/assets/sync-labels/tooling.yml
 # See: https://github.com/Financial-Times/github-label-sync#label-config-file
 
 - name: "os: windows"
