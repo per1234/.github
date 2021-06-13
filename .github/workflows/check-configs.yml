@@ -8,6 +8,7 @@ on:
       - "**/.eslintrc.yml"
       - "**/.markdownlint.yml"
       - "**/dependabot.yml"
+      - "workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json"
       - "workflow-templates/assets/sync-labels/*.yml"
   pull_request:
     paths:
@@ -15,6 +16,7 @@ on:
       - "**/.eslintrc.yml"
       - "**/.markdownlint.yml"
       - "**/dependabot.yml"
+      - "workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json"
       - "workflow-templates/assets/sync-labels/*.yml"
   schedule:
     # Run every Tuesday at 8 AM UTC to catch breakage resulting from changes to the JSON schema.
