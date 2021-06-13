@@ -33,10 +33,28 @@ Add CI workflow to check the license file
 
 Whenever one of the recognized license file names are modified in the repository, the workflow runs to check whether the
 license can be recognized and whether it is of the expected type.
+
+GitHub has a useful automated license detection system that determines the license type used by a repository, and
+surfaces that information in the repository home page, the search web interface, and the GitHub API. This license
+detection system requires that the license be defined by a dedicated file with one of several standardized filenames and
+paths.
+
+GitHub's license detection system uses the popular licensee tool, so this file also serves to define the license type
+for any other usages of licensee, as well as to human readers of the file.
+
+For this reason, and to ensure it remains a valid legal instrument, it's important that there be no non-standard
+modifications to the license file or collisions with other supported licence files. This workflow ensures that any
+changes which would change the license type or which license file is used by the detection are caught automatically.
 ```
 
 ## PR message
 
 ```markdown
 Whenever one of the recognized license file names are modified in the repository, the workflow runs [licensee](https://github.com/licensee/licensee) to check whether the license can be recognized and whether it is of the expected type.
+
+GitHub has a useful [automated license detection system](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#detecting-a-license) that determines the license type used by a repository, and surfaces that information in the repository home page, the search web interface, and the GitHub API. This license detection system requires that the license be defined by a dedicated file with one of several standardized filenames and paths.
+
+GitHub's license detection system uses the popular licensee tool, so this file also serves to define the license type for any other usages of licensee, as well as to human readers of the file.
+
+For this reason, and to ensure it remains a valid legal instrument, it's important that there be no non-standard modifications to the license file or collisions with other supported licence files. This workflow ensures that any changes which would change the license type or which license file is used by the detection are caught automatically.
 ```
