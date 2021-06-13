@@ -41,7 +41,6 @@ These colors have good contrast. When possible, follow the conventions establish
 - `#00ba9e`
 - `#00ffff`
 - `#0000ff`
-- `#000080`
 - `#800080`
 - `#d876e3`
 - `#ff00ff`

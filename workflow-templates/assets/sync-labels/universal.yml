@@ -23,7 +23,7 @@
   color: "ff0000"
   description: Off topic for this repository
 - name: "conclusion: moved"
-  color: "000080"
+  color: "940404"
   description: Issue/PR moved to another repository
   notes: |
     For use when it's not possible to do a true transfer
