@@ -1,0 +1,21 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  general:install-deps:
+    desc: Install all project dependencies
+    # This is an "umbrella" task used to run any specific dependency installation tasks or commands the project has.
+    # It can be left empty if there are none.
+
+  # Source: https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-dependencies-task/Taskfile.yml
+  general:verify-deps:
+    desc: Check for unapproved dependencies
+    deps:
+      - task: general:install-deps
+    cmds:
+      - |
+        if ! which license_finder &>/dev/null; then
+          echo "license_finder not found or not in PATH. Please install: https://github.com/pivotal/LicenseFinder#installation"
+          exit 1
+        fi
+      - license_finder action_items --quiet
