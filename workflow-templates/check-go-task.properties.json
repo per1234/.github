@@ -1,7 +1,0 @@
-{
-  "name": "Check Go (Task)",
-  "description": "Check formatting and lint Golang files. Version of the workflow for Task-based projects.",
-  "iconName": "go",
-  "categories": ["Go"],
-  "filePatterns": [".*\\.go$", "^go\\.mod$", "^go\\.sum$", "^Taskfile\\.ya?ml$"]
-}

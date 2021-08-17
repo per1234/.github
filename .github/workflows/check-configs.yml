@@ -41,14 +41,9 @@ jobs:
           - path: "**/.eslintrc.yml"
             # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json
             schema-url: https://json.schemastore.org/eslintrc
-          - path: "**/.markdownlint.yml"
-            # See: https://github.com/DavidAnson/markdownlint/blob/main/schema/markdownlint-config-schema.json
-            schema-url: https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
           - path: "**/dependabot.yml"
             # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/dependabot-2.0.json
             schema-url: https://json.schemastore.org/dependabot-2.0
-          - path: "workflow-templates/assets/sync-labels/*.yml"
-            schema-path: "workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json"
 
     steps:
       - name: Checkout repository

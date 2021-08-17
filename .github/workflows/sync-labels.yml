@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/sync-labels.md
+# Source: https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/sync-labels.md
 name: Sync Labels
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
@@ -34,7 +34,7 @@ jobs:
         id: download-schema
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://raw.githubusercontent.com/arduino/.github/master/workflow-templates/assets/sync-labels/arduino-gh-label-configuration-schema.json
+          file-url: https://raw.githubusercontent.com/arduino/tooling-project-assets/main/workflow-templates/assets/sync-labels/arduino-tooling-gh-label-configuration-schema.json
           location: ${{ runner.temp }}/label-configuration-schema
 
       - name: Install JSON schema validator
@@ -63,7 +63,7 @@ jobs:
       - name: Download
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://raw.githubusercontent.com/arduino/.github/master/workflow-templates/assets/sync-labels/${{ matrix.filename }}
+          file-url: https://raw.githubusercontent.com/arduino/tooling-project-assets/main/workflow-templates/assets/sync-labels/${{ matrix.filename }}
 
       - name: Pass configuration files to next job via workflow artifact
         uses: actions/upload-artifact@v2

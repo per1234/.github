@@ -63,7 +63,7 @@ On every push and pull request that affects relevant files, and periodically, ch
 ## Related
 
 - ["Check Prettier Formatting" workflow (npm)](check-prettier-formatting-npm.md)
-- ["Check Prettier Formatting" workflow (Task)](check-prettier-formatting-task.md)
+- ["Check Prettier Formatting" workflow (Task)](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/check-prettier-formatting-task.md)
 - ["Spell Check" workflow](spell-check.md)
 - ["Check Markdown" workflow](check-markdown.md)
 - ["Check General Formatting" workflow](check-general-formatting.md)

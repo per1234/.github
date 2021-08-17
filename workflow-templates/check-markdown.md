@@ -11,9 +11,9 @@ NOTE: This workflow is focused on linting. Formatting checks for Markdown are pr
 
 ## Assets
 
-- [`.markdown-link-check.json`](assets/check-markdown/.markdown-link-check.json) - markdown-link-check configuration file.
+- [`.markdown-link-check.json`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-markdown/.markdown-link-check.json) - markdown-link-check configuration file.
   - Install to: repository root
-- [`.markdownlint.yml`](assets/check-markdown/.markdownlint.yml) - markdownlint configuration file.
+- [`.markdownlint.yml`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-markdown/.markdownlint.yml) - markdownlint configuration file.
   - Install to: repository root
 
 The code style defined in `.markdownlint.yml` is the official standardized style to be used in all Arduino projects and should not be modified.
@@ -91,7 +91,7 @@ https://github.com/tcort/markdown-link-check#config-file-format
 
 ## Related
 
-- ["Check Markdown" workflow (Task)](check-markdown-task.md)
+- ["Check Markdown" workflow (Task)](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/check-markdown-task.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
 - ["Spell Check" workflow](spell-check.md)
 - ["Check ToC" workflow](check-toc.md)

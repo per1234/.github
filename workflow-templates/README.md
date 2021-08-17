@@ -2,6 +2,8 @@
 
 A collection of reusable [GitHub Actions workflows](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow). These can be added to any repository under the organization via [GitHub's "Actions" web UI](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization), but copying the files to the repository does the same thing so it's not required to use the web UI.
 
+**NOTE:** Please also check the additional collection of reusable workflows hosted here: https://github.com/arduino/tooling-project-assets/tree/main/workflow-templates
+
 ## Documentation
 
 While some workflows can be added to any repository without any modification, others need to be configured for each project. "TODO" comments in the workflow explain what needs to be done. Documentation for each workflow is provided by the .md file of the same name, including:

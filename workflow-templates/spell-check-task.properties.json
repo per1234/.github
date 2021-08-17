@@ -1,6 +1,0 @@
-{
-  "name": "Spell Check (Task)",
-  "description": "Check the contents of the repository for common misspellings. Version of the workflow for Task-based projects.",
-  "iconName": "book",
-  "filePatterns": ["^\\.codespellrc$", "^Taskfile\\.ya?ml$"]
-}

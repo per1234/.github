@@ -6,14 +6,14 @@ Use [editorconfig-checker](https://github.com/editorconfig-checker/editorconfig-
 
 ## Assets
 
-- [`.editorconfig`](assets/shared/.editorconfig)
+- [`.editorconfig`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/general/.editorconfig)
   - Install to: repository root
 
 The formatting style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
 
 ## Configuration
 
-General formatting settings are configured in the [`.editorconfig` file](https://editorconfig.org/). [The standardized `.editorconfig`](assets/shared/.editorconfig) should be used in all Arduino repositories.
+General formatting settings are configured in the [`.editorconfig` file](https://editorconfig.org/). [The standardized `.editorconfig`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/general/.editorconfig) should be used in all Arduino repositories.
 
 editorconfig-checker can be configured via an `.ecrc` file:
 https://github.com/editorconfig-checker/editorconfig-checker#configuration

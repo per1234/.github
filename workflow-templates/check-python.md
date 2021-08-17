@@ -6,12 +6,23 @@ Run [flake8](https://flake8.pycqa.org/) and [black](https://github.com/psf/black
 
 ## Assets
 
-- [`.flake8`](assets/check-python/.flake8) - flake8 configuration file.
-  - Install to: repository root
-- [`pyproject.toml`](assets/check-python/pyproject.toml) - black configuration file.
+- [`.flake8`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-python/.flake8) - flake8 configuration file.
   - Install to: repository root
 
 The code style defined in these files is the official standardized style to be used in all Arduino projects and should not be modified.
+
+## Configuration
+
+### black
+
+Add the following to `pyproject.toml`:
+
+```toml
+[tool.black]
+line-length = 120
+```
+
+The `black` configuration is the official standardized style to be used in all Arduino projects and should not be modified.
 
 ## Readme badge
 
@@ -56,4 +67,4 @@ https://flake8.pycqa.org/en/latest/user/configuration.html
 
 ## Related
 
-- ["Check Python" workflow (Task)](check-python-task.md)
+- ["Check Python" workflow (Task)](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/check-python-task.md)

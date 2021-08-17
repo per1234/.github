@@ -1,7 +1,0 @@
-{
-  "name": "Test Go (Task)",
-  "description": "Test Golang code. Version of the workflow for Task-based projects.",
-  "iconName": "go",
-  "categories": ["Go"],
-  "filePatterns": [".*\\.go$", "^go\\.mod$", "^go\\.sum$", "^Taskfile\\.ya?ml$"]
-}

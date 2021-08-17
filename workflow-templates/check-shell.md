@@ -9,7 +9,7 @@ Check the repository's shell scripts for problems:
 
 ## Assets
 
-- [`.editorconfig`](assets/shared/.editorconfig) - `shfmt` will use this [configuration file](https://editorconfig.org/).
+- [`.editorconfig`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/general/.editorconfig) - `shfmt` will use this [configuration file](https://editorconfig.org/).
   - Install to: repository root
 
 The formatting style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.

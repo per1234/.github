@@ -9,10 +9,6 @@ readonly WORKFLOW_TEMPLATE_COPIES_PATH="${REPOSITORY_ROOT_PATH}/workflow-templat
 
 # Sync configuration files.
 cp \
-  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/shared/.editorconfig" \
-  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-markdown/.markdown-link-check.json" \
-  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-markdown/.markdownlint.yml" \
-  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-yaml/.yamllint.yml" \
   "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-json/.eslintrc.yml" \
   "$REPOSITORY_ROOT_PATH"
 
@@ -25,7 +21,6 @@ cp \
   "${WORKFLOW_TEMPLATES_PATH}/check-shell.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/check-yaml.yml" \
   "${WORKFLOW_TEMPLATES_PATH}/spell-check.yml" \
-  "${WORKFLOW_TEMPLATES_PATH}/sync-labels.yml" \
   "$WORKFLOWS_PATH"
 
 # Sync workflow templates with the copies in the folder where Dependabot can check them for updates.

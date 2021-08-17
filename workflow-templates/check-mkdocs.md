@@ -6,7 +6,7 @@ Check for problems with a [MkDocs](https://www.mkdocs.org/)-based static website
 
 ## Assets
 
-See [the "Deploy MkDocs Website" workflow documentation](deploy-mkdocs.md#assets).
+See [the "Deploy Website" workflow documentation](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/deploy-mkdocs-poetry.md#installation).
 
 ## Readme badge
 
@@ -45,7 +45,7 @@ On every push or pull request that affects the source and configuration for the 
 
 ## Related
 
-- ["Deploy MkDocs Website" workflow](deploy-mkdocs.md)
+- ["Deploy Website" workflow](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/deploy-mkdocs-poetry.md#installation)
 - ["Check Markdown" workflow](check-markdown.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
 - ["Spell Check" workflow](spell-check.md)

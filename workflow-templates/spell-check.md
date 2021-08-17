@@ -6,7 +6,7 @@ Use [codespell](https://github.com/codespell-project/codespell) to check for com
 
 ## Assets
 
-- [.codespellrc](assets/spell-check/.codespellrc) - codespell configuration file.
+- [.codespellrc](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/spell-check/.codespellrc) - codespell configuration file.
   - Install to: repository root
 
 ## Readme badge
@@ -52,6 +52,6 @@ In the event of a false positive, the problematic word should be added, in all l
 
 ## Related
 
-- ["Spell Check" workflow (Task)](spell-check-task.md)
+- ["Spell Check" workflow (Task)](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/spell-check-task.md)
 - ["Check Markdown" workflow](check-markdown.md)
 - ["Check Prettier Formatting" workflow](check-prettier-formatting.md)
