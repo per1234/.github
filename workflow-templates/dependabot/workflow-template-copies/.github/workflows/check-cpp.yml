@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-cpp.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/check-cpp.md
 name: Check C++
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows

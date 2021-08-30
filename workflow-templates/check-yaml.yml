@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-yaml.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/check-yaml.md
 name: Check YAML
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows

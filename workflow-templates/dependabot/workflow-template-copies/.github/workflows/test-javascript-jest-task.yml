@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/test-javascript-jest-task.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/test-javascript-jest-task.md
 name: Test JavaScript
 
 on:

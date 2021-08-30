@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/assets/check-action-metadata-task/Taskfile.yml
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/assets/check-action-metadata-task/Taskfile.yml
 # See: https://taskfile.dev/#/usage
 version: "3"
 

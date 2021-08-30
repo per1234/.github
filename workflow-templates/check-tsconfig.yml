@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-tsconfig.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/check-tsconfig.md
 name: Check TypeScript Configuration
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows

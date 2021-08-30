@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/report-size-deltas.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/report-size-deltas.md
 name: Report Size Deltas
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows

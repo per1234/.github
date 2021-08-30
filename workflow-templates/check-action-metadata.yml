@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/check-action-metadata.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/check-action-metadata.md
 name: Check Action Metadata
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows

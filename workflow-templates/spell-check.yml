@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/spell-check.md
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/spell-check.md
 name: Spell Check
 
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows

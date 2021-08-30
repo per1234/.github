@@ -1,4 +1,4 @@
-# Source: https://github.com/arduino/.github/blob/master/workflow-templates/assets/check-cpp/.clang-format
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/assets/check-cpp/.clang-format
 # See: https://releases.llvm.org/11.0.1/tools/clang/docs/ClangFormatStyleOptions.html
 ---
 Language: Cpp
