@@ -23,7 +23,6 @@ env:
 
 jobs:
   check:
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
@@ -38,25 +37,30 @@ jobs:
           location: ${{ runner.temp }}/label-configuration-schema
 
       - name: Install JSON schema validator
-        run: sudo npm install --global ajv-cli
+        run: |
+          sudo npm install \
+            --global \
+            ajv-cli \
+            ajv-formats
 
       - name: Validate local labels configuration
         run: |
           # See: https://github.com/ajv-validator/ajv-cli#readme
           ajv validate \
+            --all-errors \
+            -c ajv-formats \
             -s "${{ steps.download-schema.outputs.file-path }}" \
             -d "${{ env.CONFIGURATIONS_FOLDER }}/*.{yml,yaml}"
 
   download:
     needs: check
-    if: always() && (needs.check.result == 'skipped' || needs.check.result == 'success')
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         filename:
-          # Filenames of the configurations to apply to the repository in addition to the local configuration.
-          # https://github.com/arduino/.github/blob/master/workflow-templates/assets/sync-labels
+          # Filenames of the shared configurations to apply to the repository in addition to the local configuration.
+          # https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/sync-labels
           - universal.yml
 
     steps:
@@ -68,7 +72,9 @@ jobs:
       - name: Pass configuration files to next job via workflow artifact
         uses: actions/upload-artifact@v2
         with:
-          path: "*.yml"
+          path: |
+            *.yaml
+            *.yml
           if-no-files-found: error
           name: ${{ env.CONFIGURATIONS_ARTIFACT }}
 
@@ -85,8 +91,14 @@ jobs:
       - name: Determine whether to dry run
         id: dry-run
         if: >
-          github.event == 'pull_request' ||
-          github.ref != format('refs/heads/{0}', github.event.repository.default_branch)
+          github.event_name == 'pull_request' ||
+          (
+            (
+              github.event_name == 'push' ||
+              github.event_name == 'workflow_dispatch'
+            ) &&
+            github.ref != format('refs/heads/{0}', github.event.repository.default_branch)
+          )
         run: |
           # Use of this flag in the github-label-sync command will cause it to only check the validity of the
           # configuration.
@@ -109,7 +121,8 @@ jobs:
       - name: Merge label configuration files
         run: |
           # Merge all configuration files
-          cat "${{ env.CONFIGURATIONS_FOLDER }}"/*.yml > "${{ env.MERGED_CONFIGURATION_PATH }}"
+          shopt -s extglob
+          cat "${{ env.CONFIGURATIONS_FOLDER }}"/*.@(yml|yaml) > "${{ env.MERGED_CONFIGURATION_PATH }}"
 
       - name: Install github-label-sync
         run: sudo npm install --global github-label-sync
