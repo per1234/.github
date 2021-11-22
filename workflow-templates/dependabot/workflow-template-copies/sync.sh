@@ -1,7 +1,8 @@
 #!/bin/bash
 # Copy the workflow templates to the folder where Dependabot can check them for updates.
 
-readonly SCRIPT_PATH="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+SCRIPT_PATH="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+readonly SCRIPT_PATH
 readonly WORKFLOW_TEMPLATES_PATH="${SCRIPT_PATH}/../.."
 readonly WORKFLOW_TEMPLATE_COPIES_PATH="${SCRIPT_PATH}/.github/workflows"
 

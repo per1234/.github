@@ -1,7 +1,8 @@
 #!/bin/bash
 # Sync the repository's intentionally duplicated files.
 
-readonly REPOSITORY_ROOT_PATH="$(git rev-parse --show-toplevel)"
+REPOSITORY_ROOT_PATH="$(git rev-parse --show-toplevel)"
+readonly REPOSITORY_ROOT_PATH
 readonly WORKFLOW_TEMPLATE_ASSETS_PATH="${REPOSITORY_ROOT_PATH}/workflow-templates/assets"
 readonly WORKFLOW_TEMPLATES_PATH="${REPOSITORY_ROOT_PATH}/workflow-templates"
 readonly WORKFLOWS_PATH="${REPOSITORY_ROOT_PATH}/.github/workflows"
