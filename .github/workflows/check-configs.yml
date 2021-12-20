@@ -52,7 +52,7 @@ jobs:
       - name: Download JSON schema
         id: download-schema
         if: matrix.configuration.schema-url != ''
-        uses: carlosperate/download-file-action@v1.0.3
+        uses: carlosperate/download-file-action@v1
         with:
           file-url: ${{ matrix.configuration.schema-url }}
           location: ${{ runner.temp }}
