@@ -27,7 +27,7 @@ jobs:
 
       - name: Download JSON schema for action.yml
         id: download-schema
-        uses: carlosperate/download-file-action@v1.0.3
+        uses: carlosperate/download-file-action@v1.1.0
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/github-action.json
           file-url: https://json.schemastore.org/github-action
