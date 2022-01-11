@@ -4,6 +4,10 @@ Workflow file: [check-npm.yml](check-npm.yml)
 
 Check for problems with configuration files of the [npm](https://www.npmjs.com/) JavaScript package manager.
 
+## Configuration
+
+Configure the version of Node.js used for development of the project in the `env.NODE_VERSION` field of `check-npm.yml`.
+
 ## Readme badge
 
 Markdown badge:

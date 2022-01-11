@@ -40,6 +40,10 @@ https://github.com/prettier/eslint-config-prettier/#installation
 - [`Taskfile.yml`](assets/check-typescript-task/Taskfile.yml] - Linting task.
   - Install to: repository root
 
+## Configuration
+
+Configure the version of Node.js used for development of the project in the `env.NODE_VERSION` field of `check-typescript-task.yml`.
+
 ## Readme badge
 
 Markdown badge:

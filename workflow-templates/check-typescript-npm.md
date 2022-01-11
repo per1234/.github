@@ -51,6 +51,10 @@ Add the following [script](https://docs.npmjs.com/cli/v7/using-npm/scripts) to `
 - [`.eslintrc.yml`](assets/check-typescript/.eslintrc.yml) - eslint configuration file. The code style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
   - Install to: repository root
 
+## Configuration
+
+Configure the version of Node.js used for development of the project in the `env.NODE_VERSION` field of `check-typescript-npm.yml`.
+
 ## Readme badge
 
 Markdown badge:

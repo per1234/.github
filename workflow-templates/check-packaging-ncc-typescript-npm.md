@@ -17,6 +17,10 @@ Add the following [scripts](https://docs.npmjs.com/cli/v7/using-npm/scripts) to 
 "pack": "ncc build"
 ```
 
+## Configuration
+
+Configure the version of Node.js used for development of the project in the `env.NODE_VERSION` field of `check-packaging-ncc-typescript-npm.yml`.
+
 ## Readme badge
 
 Markdown badge:
