@@ -11,6 +11,10 @@ This is the version of the workflow for projects using the [Task](https://taskfi
 - [`Taskfile.yml`](assets/check-packaging-ncc-typescript-task/Taskfile.yml]
   - Install to: repository root
 
+## Configuration
+
+Configure the version of Node.js used for development of the project in the `env.NODE_VERSION` field of `check-packaging-ncc-typescript-task.yml`.
+
 ## Readme badge
 
 Markdown badge:

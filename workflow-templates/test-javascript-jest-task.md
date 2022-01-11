@@ -11,6 +11,10 @@ This is the version of the workflow for projects using the [Task](https://taskfi
 - [`Taskfile.yml`](assets/test-javascript-jest-task/Taskfile.yml]
   - Install to: repository root
 
+## Configuration
+
+Configure the version of Node.js used for development of the project in the `env.NODE_VERSION` field of `test-javascript-jest-task.yml`.
+
 ## Readme badge
 
 Markdown badge:
