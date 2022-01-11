@@ -9,7 +9,7 @@ Validate [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-j
 Markdown badge:
 
 ```markdown
-[![Check TypeScript status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-tsconfig.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-tsconfig.yml)
+[![Check TypeScript Configuration status](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-tsconfig.yml/badge.svg)](https://github.com/REPO_OWNER/REPO_NAME/actions/workflows/check-tsconfig.yml)
 ```
 
 Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final repository owner and name ([example](https://raw.githubusercontent.com/arduino-libraries/ArduinoIoTCloud/master/README.md)).
@@ -19,7 +19,7 @@ Replace the `REPO_OWNER` and `REPO_NAME` placeholders in the URLs with the final
 Asciidoc badge:
 
 ```adoc
-image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-tsconfig.yml/badge.svg["Check TypeScript status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-tsconfig.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-tsconfig.yml/badge.svg["Check TypeScript Configuration status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-tsconfig.yml"]
 ```
 
 Define the `{repository-owner}` and `{repository-name}` attributes and use them throughout the readme ([example](https://raw.githubusercontent.com/arduino-libraries/WiFiNINA/master/README.adoc)).
