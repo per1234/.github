@@ -29,7 +29,7 @@ npm install --save-dev eslint
 #### eslint-config-airbnb-base
 
 Install **eslint-config-airbnb-typescript** by following these instructions:<br />
-https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#eslint-config-airbnb-base-1
+https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#eslint-config-airbnb-base
 
 #### eslint-config-prettier
 
