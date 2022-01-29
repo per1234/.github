@@ -3,15 +3,9 @@
 
 REPOSITORY_ROOT_PATH="$(git rev-parse --show-toplevel)"
 readonly REPOSITORY_ROOT_PATH
-readonly WORKFLOW_TEMPLATE_ASSETS_PATH="${REPOSITORY_ROOT_PATH}/workflow-templates/assets"
 readonly WORKFLOW_TEMPLATES_PATH="${REPOSITORY_ROOT_PATH}/workflow-templates"
 readonly WORKFLOWS_PATH="${REPOSITORY_ROOT_PATH}/.github/workflows"
 readonly WORKFLOW_TEMPLATE_COPIES_PATH="${REPOSITORY_ROOT_PATH}/workflow-templates/dependabot/workflow-template-copies/.github/workflows"
-
-# Sync configuration files.
-cp \
-  "${WORKFLOW_TEMPLATE_ASSETS_PATH}/check-json/.eslintrc.yml" \
-  "$REPOSITORY_ROOT_PATH"
 
 # Sync workflows.
 cp \

@@ -1,0 +1,5 @@
+{
+  "name": "Check General Formatting (npm)",
+  "description": "Check the repository's files for compliance with the .editorconfig settings. Version of the workflow for npm-based projects.",
+  "iconName": "star"
+}
