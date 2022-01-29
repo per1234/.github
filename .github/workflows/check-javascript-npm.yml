@@ -1,0 +1,33 @@
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/check-javascript-npm.md
+name: Check JavaScript
+
+# See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
+on:
+  push:
+    paths:
+      - ".github/workflows/check-javascript-npm.ya?ml"
+      - "**/.eslintrc*"
+      - "package.json"
+      - "**.jsx?"
+  pull_request:
+    paths:
+      - ".github/workflows/check-javascript-npm.ya?ml"
+      - "**/.eslintrc*"
+      - "package.json"
+      - "**.jsx?"
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install --only=dev
+
+      - name: Lint
+        run: npm run-script lint

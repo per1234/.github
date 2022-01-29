@@ -1,0 +1,11 @@
+# Source: https://github.com/per1234/.github/blob/main/workflow-templates/assets/prettier/.prettierrc.yml
+# See: https://prettier.io/docs/en/configuration.html
+overrides:
+  - files:
+      - "*.js"
+      - "*.jsx"
+      - "*.ts"
+      - "*.tsx"
+    options:
+      printWidth: 120 # Target width
+      singleQuote: true
