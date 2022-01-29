@@ -4,7 +4,7 @@
 # not be modified.
 
 extends:
-  - airbnb-typescript/base
+  - airbnb-base
   - prettier
 rules:
   max-len:
