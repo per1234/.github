@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # .eslintrc and dependabot.yml schemas are draft-04, which is unsupported by avj-cli 4.x
+      # .eslintrc, .prettierrc, and dependabot.yml schemas are draft-04, which is unsupported by avj-cli 4.x
       AJV_CLI_VERSION: 3.3.0
 
     strategy:
@@ -41,6 +41,9 @@ jobs:
           - path: "**/.eslintrc.yml"
             # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json
             schema-url: https://json.schemastore.org/eslintrc
+          - path: "**/.prettierrc.yml"
+            # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/prettierrc.json
+            schema-url: https://json.schemastore.org/prettierrc
           - path: "**/dependabot.yml"
             # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/dependabot-2.0.json
             schema-url: https://json.schemastore.org/dependabot-2.0
