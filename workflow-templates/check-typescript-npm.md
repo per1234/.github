@@ -26,12 +26,10 @@ https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/RE
 #### eslint-config-airbnb-typescript
 
 Install **eslint-config-airbnb-typescript** by following these instructions:<br />
-https://github.com/iamturns/eslint-config-airbnb-typescript#1-install
+https://github.com/iamturns/eslint-config-airbnb-typescript#setup
 
 Install the related plugins by following these instructions:<br />
-https://github.com/iamturns/eslint-config-airbnb-typescript#2-install-eslint-plugins
-
-**Note:** the above link provides two separate commands: one for projects using [React](https://reactjs.org/), another for projects that don't use React.
+https://github.com/iamturns/eslint-config-airbnb-typescript#2-install-dependencies-and-peer-dependencies
 
 #### eslint-config-prettier
 
