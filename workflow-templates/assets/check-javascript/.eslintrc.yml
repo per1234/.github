@@ -12,4 +12,3 @@ rules:
     - code: 180
   no-console: "off"
   no-underscore-dangle: "off"
-  import/prefer-default-export: "off"
