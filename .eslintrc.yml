@@ -13,6 +13,7 @@ extends:
 plugins:
   - jsonc
 ignorePatterns:
+  - "**/package-lock.json"
   - "workflow-templates/assets/check-javascript/"
   - "workflow-templates/assets/check-typescript/"
 rules:

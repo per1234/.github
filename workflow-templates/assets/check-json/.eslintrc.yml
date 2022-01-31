@@ -8,6 +8,8 @@ extends:
   - plugin:jsonc/prettier
 plugins:
   - jsonc
+ignorePatterns:
+  - "**/package-lock.json"
 rules:
   jsonc/key-name-casing:
     - warn
