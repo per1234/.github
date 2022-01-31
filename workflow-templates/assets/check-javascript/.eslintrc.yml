@@ -11,7 +11,6 @@ rules:
     - error
     - code: 180
   no-console: "off"
-  spaced-comment: warn
   arrow-parens: "off"
   consistent-return: "off"
   no-useless-escape: "off"
