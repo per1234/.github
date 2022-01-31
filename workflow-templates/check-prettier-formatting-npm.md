@@ -14,6 +14,11 @@ Use [Prettier](https://prettier.io/docs/en/index.html) to check formatting. Supp
 
 This is the version of the workflow for projects that use [npm](https://www.npmjs.com/).
 
+## Assets
+
+- [`.prettierrc.yml`](assets/prettier/.prettierrc.yml) - [Prettier](https://prettier.io/docs/en/index.html) configuration file. The code style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
+  - Install to: repository root
+
 ## Installation
 
 ### 1. Install tool dependencies

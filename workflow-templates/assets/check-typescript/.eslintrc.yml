@@ -24,10 +24,6 @@ rules:
     - 2
     - SwitchCase: 1
   spaced-comment: warn
-  "@typescript-eslint/quotes":
-    - error
-    - single
-    - allowTemplateLiterals: true
   arrow-parens: "off"
   consistent-return: "off"
   no-useless-escape: "off"
