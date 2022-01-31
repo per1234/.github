@@ -18,4 +18,3 @@ rules:
     - code: 180
   no-console: "off"
   no-underscore-dangle: "off"
-  "@typescript-eslint/type-annotation-spacing": error
