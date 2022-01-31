@@ -11,10 +11,6 @@ rules:
     - error
     - code: 180
   no-console: "off"
-  indent:
-    - error
-    - 2
-    - SwitchCase: 1
   spaced-comment: warn
   arrow-parens: "off"
   consistent-return: "off"
