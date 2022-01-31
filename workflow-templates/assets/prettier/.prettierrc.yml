@@ -7,4 +7,5 @@ overrides:
       - "*.ts"
       - "*.tsx"
     options:
+      printWidth: 120 # Target width
       singleQuote: true
