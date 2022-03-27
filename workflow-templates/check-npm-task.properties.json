@@ -1,0 +1,11 @@
+{
+  "name": "Check npm (Task)",
+  "description": "Check the repository's npm configuration files. Version of the workflow for Task-based projects.",
+  "iconName": "javascript",
+  "categories": ["JavaScript", "TypeScript"],
+  "filePatterns": [
+    "^package\\.json$",
+    "^package-lock\\.json$",
+    "^Taskfile\\.ya?ml$"
+  ]
+}
