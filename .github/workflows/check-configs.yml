@@ -24,6 +24,8 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
+permissions: {}
+
 jobs:
   validate:
     name: ${{ matrix.configuration.path }}

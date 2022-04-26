@@ -13,6 +13,8 @@ on:
   push:
   pull_request:
 
+permissions: {}
+
 jobs:
   check-sync:
     runs-on: ubuntu-latest

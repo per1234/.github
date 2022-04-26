@@ -200,6 +200,9 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest

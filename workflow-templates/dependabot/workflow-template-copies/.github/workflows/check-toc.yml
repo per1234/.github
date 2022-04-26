@@ -15,6 +15,9 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     name: ${{ matrix.file.name }}
