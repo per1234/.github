@@ -1,6 +1,10 @@
 # Source: https://github.com/per1234/.github/blob/main/workflow-templates/check-python.md
 name: Check Python
 
+env:
+  # See: https://github.com/actions/setup-python/tree/v3#available-versions-of-python
+  PYTHON_VERSION: "3.9"
+
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:
   push:
@@ -56,6 +60,8 @@ jobs:
 
       - name: Install Python
         uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Check formatting
         uses: psf/black@stable
