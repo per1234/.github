@@ -55,7 +55,7 @@ jobs:
       - name: Format
         uses: DoozyX/clang-format-lint-action@v0.13
         with:
-          clangFormatVersion: 11
+          clangFormatVersion: 13
           exclude: ./.git
           extensions: c,c++,cc,cp,cpp,cxx,h,h++,hh,hpp,hxx,ii,ino,inl,ipp,ixx,tpl,tpp,txx
 
