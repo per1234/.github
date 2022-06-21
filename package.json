@@ -4,7 +4,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsonc": "^2.1.0"
+    "eslint-plugin-jsonc": "^2.3.0"
   },
   "scripts": {
     "lint": "eslint --ext .js,.jsx ."
