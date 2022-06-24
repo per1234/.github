@@ -6,11 +6,17 @@ on:
   push:
     paths:
       - ".github/workflows/test-cpp.ya?ml"
+      - ".github/.?codecov.ya?ml"
+      - "dev/.?codecov.ya?ml"
+      - ".?codecov.ya?ml"
       - "extras/test/**"
       - "src/**"
   pull_request:
     paths:
       - ".github/workflows/test-cpp.ya?ml"
+      - ".github/.?codecov.ya?ml"
+      - "dev/.?codecov.ya?ml"
+      - ".?codecov.ya?ml"
       - "extras/test/**"
       - "src/**"
   workflow_dispatch:
