@@ -1,5 +1,5 @@
 # Source: https://github.com/per1234/.github/blob/main/workflow-templates/assets/check-json/.eslintrc.yml
-# Source: https://github.com/per1234/.github/blob/main/workflow-templates/assets/check-javascript/.eslintrc.yml
+# Source: https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-javascript/.eslintrc.yml
 # See: https://eslint.org/docs/user-guide/configuring/
 # See: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/
 # The code style defined in this file is the official standardized style to be used in all Arduino projects and should

@@ -46,7 +46,7 @@ Add the following [script](https://docs.npmjs.com/cli/v7/using-npm/scripts) to `
 
 ## Assets
 
-- [`.eslintrc.yml`](assets/check-javascript/.eslintrc.yml) - eslint configuration file. The code style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
+- [`.eslintrc.yml`](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-javascript/.eslintrc.yml) - eslint configuration file. The code style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
   - Install to: repository root
 
 ## Readme badge
