@@ -21,7 +21,7 @@ The tool dependencies of this workflow are managed by [npm](https://www.npmjs.co
 #### typescript-eslint
 
 Install **typescript-eslint** by following these instructions:<br />
-https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/README.md#installation
+https://typescript-eslint.io/docs/#step-1-installation
 
 #### eslint-config-airbnb-typescript
 
