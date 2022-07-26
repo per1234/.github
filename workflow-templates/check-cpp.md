@@ -6,7 +6,7 @@ Run [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) on the Arduino/C
 
 ## Assets
 
-- [`.clang-format`](assets/check-cpp/.clang-format) - ClangFormat configuration file.
+- [`.clang-format`](https://github.com/arduino/tooling-project-assets/blob/main/other/clang-format-configuration/.clang-format) - ClangFormat configuration file.
   - Install to: repository root
 
 The code style defined in this file is the official standardized style to be used in all Arduino projects and should not be modified.
