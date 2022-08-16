@@ -41,5 +41,5 @@ On every push or pull request that affects the [action.yml](https://docs.github.
 
 ## Related
 
-- ["Check Action Metadata" workflow (Task)](check-action-metadata-task.md)
+- ["Check Action Metadata" workflow (Task)](https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/check-action-metadata-task.md)
 - ["Check YAML" workflow](check-yaml.md)
