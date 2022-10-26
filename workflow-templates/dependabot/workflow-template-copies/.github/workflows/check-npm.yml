@@ -36,7 +36,7 @@ jobs:
 
       - name: Download JSON schema for package.json
         id: download-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/package.json
           file-url: https://json.schemastore.org/package.json
@@ -46,7 +46,7 @@ jobs:
       # This schema is referenced by the package.json schema, so must also be accessible.
       - name: Download JSON schema for ava.json
         id: download-ava-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/ava.json
           file-url: https://json.schemastore.org/ava.json
@@ -56,7 +56,7 @@ jobs:
       # This schema is referenced by the package.json schema, so must also be accessible.
       - name: Download JSON schema for eslintrc.json
         id: download-eslintrc-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json
           file-url: https://json.schemastore.org/eslintrc.json
@@ -66,7 +66,7 @@ jobs:
       # This schema is referenced by the package.json schema, so must also be accessible.
       - name: Download JSON schema for jscpd configuration file
         id: download-jscpd-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/jscpd.json
           file-url: https://json.schemastore.org/jscpd.json
@@ -76,7 +76,7 @@ jobs:
       # This schema is referenced by the package.json schema, so must also be accessible.
       - name: Download JSON schema for Prettier configuration file
         id: download-prettierrc-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/prettierrc.json
           file-url: https://json.schemastore.org/prettierrc.json
@@ -86,7 +86,7 @@ jobs:
       # This schema is referenced by the package.json schema, so must also be accessible.
       - name: Download JSON schema for semantic-release
         id: download-semantic-release-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/semantic-release.json
           file-url: https://json.schemastore.org/semantic-release.json
@@ -96,7 +96,7 @@ jobs:
       # This schema is referenced by the package.json schema, so must also be accessible.
       - name: Download JSON schema for .stylelintrc
         id: download-stylelintrc-schema
-        uses: carlosperate/download-file-action@v1
+        uses: carlosperate/download-file-action@v2
         with:
           # See: https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/stylelintrc.json
           file-url: https://json.schemastore.org/stylelintrc.json
