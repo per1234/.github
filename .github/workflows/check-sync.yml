@@ -1,5 +1,4 @@
 # This repository contains intentionally duplicated copies of files:
-# - Workflow template copies under workflow-templates/dependabot/workflow-template-copies used for Dependabot checks.
 # - Workflow template copies in .github/workflows used for this repository's own CI system.
 # - Assets for the workflow templates used in this repository.
 #
