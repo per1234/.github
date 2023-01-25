@@ -66,9 +66,7 @@ jobs:
             fi
 
             echo "::error file=${nonExecutableScriptPath}::non-executable script file: $nonExecutableScriptPath";
-            if [[ "$EXIT_STATUS" == "0" ]]; then
-              EXIT_STATUS=1
-            fi
+            EXIT_STATUS=1
           done <<<"$(
                       find \
                         ${{ github.workspace }} \
