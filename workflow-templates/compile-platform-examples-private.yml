@@ -73,6 +73,11 @@ jobs:
             - source-path: ./
               # TODO: Replace this with the name of the platform under test.
               name: arduino:avr
+          libraries: |
+            # Disable the default behavior of installing the repository as a library.
+            []
+            # Additional library dependencies can be listed here.
+            # See: https://github.com/arduino/compile-sketches#libraries
           sketch-paths: |
             - libraries
           enable-deltas-report: true
