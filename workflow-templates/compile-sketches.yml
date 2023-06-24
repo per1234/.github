@@ -27,8 +27,7 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   build:
