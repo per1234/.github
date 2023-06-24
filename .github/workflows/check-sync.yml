@@ -12,11 +12,10 @@ on:
   push:
   pull_request:
 
-permissions: {}
-
 jobs:
   check-sync:
     runs-on: ubuntu-latest
+    permissions: {}
 
     steps:
       - name: Checkout repository

@@ -14,14 +14,13 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-permissions:
-  pull-requests: write
-
 jobs:
   report:
     # Scheduled workflow runs would cause excess GitHub Actions service charges in a private repo
     if: github.repository_visibility == 'public'
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Comment size deltas reports to PRs
         uses: arduino/report-size-deltas@v1

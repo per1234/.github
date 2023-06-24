@@ -24,12 +24,11 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-permissions: {}
-
 jobs:
   validate:
     name: ${{ matrix.configuration.path }}
     runs-on: ubuntu-latest
+    permissions: {}
 
     env:
       # .eslintrc, .prettierrc, and dependabot.yml schemas are draft-04, which is unsupported by avj-cli 4.x

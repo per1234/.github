@@ -39,13 +39,12 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   check:
     name: ${{ matrix.configuration.name }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     strategy:
       fail-fast: false

@@ -23,12 +23,11 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -122,6 +121,8 @@ jobs:
 
   check-sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository

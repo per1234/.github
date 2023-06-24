@@ -31,12 +31,11 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -53,6 +52,8 @@ jobs:
 
   formatting:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository
