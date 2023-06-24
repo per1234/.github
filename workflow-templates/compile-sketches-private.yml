@@ -63,7 +63,7 @@ jobs:
           platforms: ${{ matrix.board.platforms }}
           libraries: |
             # Disable the default behavior of installing the repository as a library.
-            -
+            []
             # Additional library dependencies can be listed here.
             # See: https://github.com/arduino/compile-sketches#libraries
           sketch-paths: |
