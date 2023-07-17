@@ -4,7 +4,7 @@ const shell = require('shelljs');
 
 if (!shell.which('ec')) {
   shell.echo(
-    'ec not found or not in PATH. Please install: https://github.com/editorconfig-checker/editorconfig-checker#installation'
+    'ec not found or not in PATH. Please install: https://github.com/editorconfig-checker/editorconfig-checker#installation',
   );
   shell.exit(1);
 }
