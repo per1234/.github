@@ -59,7 +59,7 @@ jobs:
         id: check-modified
         if: github.event_name == 'pull_request'
         run: |
-          echo "::set-output name=value::yes"
+          echo "value=yes" >> "$GITHUB_OUTPUT"
 
       - name: Check links
         uses: gaurav-nelson/github-action-markdown-link-check@v1

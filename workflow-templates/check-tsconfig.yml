@@ -45,7 +45,7 @@ jobs:
           mkdir -p "$OUTPUT_FOLDER"
           OUTPUT_PATH="${OUTPUT_FOLDER}/$(basename ${{ matrix.file }})"
           strip-json-comments --no-whitespace "${{ matrix.file }}" > "$OUTPUT_PATH"
-          echo "::set-output name=output-path::$OUTPUT_PATH"
+          echo "output-path=$OUTPUT_PATH" >> "$GITHUB_OUTPUT"
 
       - name: Download JSON schema for tsconfig.json
         id: download-schema
