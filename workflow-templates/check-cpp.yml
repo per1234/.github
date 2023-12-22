@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Format
-        uses: DoozyX/clang-format-lint-action@v0.16
+        uses: DoozyX/clang-format-lint-action@v0.17
         with:
           clangFormatVersion: 14
           exclude: ./.git
