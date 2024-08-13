@@ -8,7 +8,7 @@ This is the version of the workflow for projects using the [Task](https://taskfi
 
 ## Assets
 
-- [`Taskfile.yml`](assets/test-javascript-jest-task/Taskfile.yml]
+- [`Taskfile.yml`](assets/test-javascript-jest-task/Taskfile.yml)
   - Install to: repository root
 
 ## Configuration
