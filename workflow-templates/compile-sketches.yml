@@ -43,6 +43,8 @@ jobs:
         board:
           # TODO: Add list of boards to compile for here:
           - fqbn: arduino:avr:uno
+            # TODO: Arbitrary suffix used to give the sketches report artifact a unique filename.
+            artifact-name-suffix: arduino-avr-uno
             # TODO: Define the board's platform dependencies here.
             # See: https://github.com/arduino/compile-sketches#platforms
             platforms: |
@@ -73,4 +75,4 @@ jobs:
         with:
           if-no-files-found: error
           path: ${{ env.SKETCHES_REPORTS_PATH }}
-          name: ${{ env.SKETCHES_REPORTS_PATH }}
+          name: sketches-report-${{ matrix.board.artifact-name-suffix }}
