@@ -23,7 +23,6 @@ on:
 
 env:
   SKETCHES_REPORTS_PATH: sketches-reports
-  SKETCHES_REPORTS_ARTIFACT_NAME: sketches-reports
 
 jobs:
   build:
@@ -40,6 +39,8 @@ jobs:
         board:
           # TODO: Add list of boards to compile for here:
           - fqbn: arduino:avr:uno
+            # TODO: Arbitrary suffix used to give the sketches report artifact a unique filename.
+            artifact-name-suffix: arduino-avr-uno
             # TODO: Define the board's platform dependencies here.
             # See: https://github.com/arduino/compile-sketches#platforms
             platforms: |
@@ -66,11 +67,11 @@ jobs:
           sketches-report-path: ${{ env.SKETCHES_REPORTS_PATH }}
 
       - name: Save sketches report as workflow artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           if-no-files-found: error
           path: ${{ env.SKETCHES_REPORTS_PATH }}
-          name: ${{ env.SKETCHES_REPORTS_ARTIFACT_NAME }}
+          name: sketches-report-${{ matrix.board.artifact-name-suffix }}
 
   report-size-deltas:
     needs: build
@@ -84,9 +85,8 @@ jobs:
       - name: Download sketches reports artifact
         id: download-artifact
         continue-on-error: true # If compilation failed for all boards then there are no artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: ${{ env.SKETCHES_REPORTS_ARTIFACT_NAME }}
           path: ${{ env.SKETCHES_REPORTS_PATH }}
 
       - name: Comment size deltas report to PR
