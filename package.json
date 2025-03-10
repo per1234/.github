@@ -10,6 +10,6 @@
     "lint": "eslint --ext .js,.jsx ."
   },
   "dependencies": {
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.9.1"
   }
 }
