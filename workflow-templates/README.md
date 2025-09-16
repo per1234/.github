@@ -1,6 +1,6 @@
 # GitHub Actions workflow templates
 
-A collection of reusable [GitHub Actions workflows](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow). These can be added to any repository under the organization via [GitHub's "Actions" web UI](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization), but copying the files to the repository does the same thing so it's not required to use the web UI.
+A collection of reusable [GitHub Actions workflows](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow). These can be added to any repository under the organization via [GitHub's "Actions" web UI](https://docs.github.com/actions/how-tos/write-workflows/use-workflow-templates), but copying the files to the repository does the same thing so it's not required to use the web UI.
 
 **NOTE:** Please also check the additional collection of reusable workflows hosted here: https://github.com/arduino/tooling-project-assets/tree/main/workflow-templates
 
